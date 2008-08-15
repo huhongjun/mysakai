@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE faces-config PUBLIC
+  "-//Sun Microsystems, Inc.//DTD JavaServer Faces Config 1.0//EN"
+  "http://java.sun.com/dtd/web-facesconfig_1_0.dtd">
+<faces-config>
+	<application>
+    	<message-bundle>org.sakaiproject.sitestats.tool.bundle.Messages</message-bundle>
+    	<locale-config>
+      		<default-locale>zh_CN</default-locale>
+      		<supported-locale>en_US</supported-locale>
+      		<supported-locale>zh_CN</supported-locale>
+    	</locale-config>
+  	</application>
+  	
+	<!-- Message Bundle -->
+    <managed-bean>
+		<description>Dynamic Resource Bundle Loader</description>
+		<managed-bean-name>msgs</managed-bean-name>
+		<managed-bean-class>org.sakaiproject.util.ResourceLoader</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<description>Bundle baseName</description>
+			<property-name>baseName</property-name>
+			<value>org.sakaiproject.tool.permission.bundle.Messages</value>
+		</managed-property>
+	</managed-bean>
+    
+    <!-- HTML table sort header renderer -->
+	<render-kit>
+        <renderer>
+            <component-family>javax.faces.Command</component-family>
+            <renderer-type>org.apache.myfaces.SortHeader</renderer-type>
+            <renderer-class>org.sakaiproject.permission.tool.jsf.HtmlSortHeaderRenderer</renderer-class>
+        </renderer>
+    </render-kit>
+
+	<!-- Navigation Rules: Task List -->
+    <navigation-rule>
+		<from-view-id>/permission/*</from-view-id>
+		<navigation-case>
+			<from-outcome>PermissionsViewAll</from-outcome>
+			<to-view-id>/permission/PermissionsViewAll.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>PermissionsAnnouncement</from-outcome>
+			<to-view-id>/permission/PermissionsAnnouncement.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>PermissionsCalendar</from-outcome>
+			<to-view-id>/permission/PermissionsCalendar.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>PermissionsContent</from-outcome>
+			<to-view-id>/permission/PermissionsContent.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>SuccessReturn</from-outcome>
+			<to-view-id>/permission/Success.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+    <!-- Backing Bean: Task List -->
+    <managed-bean>
+        <description>Permission Tool: PermissionListBean</description>
+        <managed-bean-name>PermissionListBean</managed-bean-name>
+        <managed-bean-class>org.sakaiproject.permission.tool.jsf.PermissionListBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<description>Security Service</description>
+			<property-name>securityService</property-name>
+			<value>#{Components["org.sakaiproject.authz.api.SecurityService"]}</value>
+		</managed-property>        
+    </managed-bean>
+</faces-config>

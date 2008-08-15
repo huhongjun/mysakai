@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE faces-config PUBLIC
+  "-//Sun Microsystems, Inc.//DTD JavaServer Faces Config 1.0//EN"
+  "http://java.sun.com/dtd/web-facesconfig_1_0.dtd">
+<faces-config>
+	<application>
+    	<message-bundle>org.sakaiproject.tool.birt.bundle.Messages</message-bundle>
+    	<locale-config>
+      		<default-locale>zh_CN</default-locale>
+      		<supported-locale>en_US</supported-locale>
+      		<supported-locale>zh_CN</supported-locale>
+    	</locale-config>
+  	</application>
+  	
+	<!-- Message Bundle -->
+    <managed-bean>
+		<description>Dynamic Resource Bundle Loader</description>
+		<managed-bean-name>msgs</managed-bean-name>
+		<managed-bean-class>org.sakaiproject.util.ResourceLoader</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<description>Bundle baseName</description>
+			<property-name>baseName</property-name>
+			<value>org.sakaiproject.tool.birt.bundle.Messages</value>
+		</managed-property>
+	</managed-bean>
+    
+    <!-- HTML table sort header renderer -->
+
+
+	<!-- Navigation Rules: Task List -->
+    <navigation-rule>
+		<from-view-id>/birt/*</from-view-id>
+		<navigation-case>
+			<from-outcome>main</from-outcome>
+			<to-view-id>/birt/reportViewer.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+    <!-- Backing Bean: Birt List -->
+    <managed-bean>
+    	<description>Report list Bean</description>
+    	<managed-bean-name>reportListBean</managed-bean-name>
+    	<managed-bean-class>
+    		org.sakaiproject.birt.tool.jsf.ReportListBean
+    	</managed-bean-class>
+    	<managed-bean-scope>session</managed-bean-scope>
+    	<managed-property>
+    		<property-name>reportList</property-name>
+    		<property-class>java.util.HashMap</property-class>
+    		<map-entries>
+    			<key-class>java.lang.String</key-class>
+    			<value-class>java.lang.String</value-class>
+    			<map-entry>
+    				<key>论坛统计报表(80)</key>
+    				<value>report/JforumTopics80.rptdesign</value>
+    			</map-entry>
+    			<map-entry>
+    				<key>论坛统计报表(zhjedu)</key>
+    				<value>report/JforumTopics.rptdesign</value>
+    			</map-entry>
+    			<map-entry>
+    				<key>论坛统计报表(localhost)</key>
+    				<value>report/JforumTopicsLH.rptdesign</value>
+    			</map-entry>
+    			<map-entry>
+    				<key>论坛统计报表(localhost-mysql)</key>
+    				<value>report/JforumTopicsLH-mysql.rptdesign</value>
+    			</map-entry>
+    		</map-entries>
+    	</managed-property>
+    	<managed-property>
+    		<property-name>selectedReport</property-name>
+    		<value>report/JforumTopics80.rptdesign</value>
+    	</managed-property>
+    </managed-bean>
+</faces-config>

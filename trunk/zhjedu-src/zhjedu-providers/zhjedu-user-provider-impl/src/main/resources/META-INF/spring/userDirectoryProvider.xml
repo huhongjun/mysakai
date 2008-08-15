@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="com.zhjedu.vcle.JdbcUserDirectory"
+			class="com.zhjedu.vcle.JdbcUserDirectory"
+			singleton="true">
+		<property name="dataSource" ref="com.zhjedu.vcle.CourseManagementDataSource"/>
+
+		<property name="userIdDbQuery" 
+		value="Select DISTINCT EID, FIRST_NAME, LAST_NAME, EMAIL, PERSON_TYPE, ID from mid_user_vw where EID=?" />
+		<property name="userEmailDbQuery" 
+		value="SELECT DISTINCT EID, FIRST_NAME, LAST_NAME, EMAIL, PERSON_TYPE, ID from mid_user_vw WHERE EMAIL LIKE ? order by PERSON_TYPE asc" />
+
+		<property name="userToDbMap">
+			<map>
+				<entry key="eid" value="EID" />
+				<entry key="firstName" value="FIRST_NAME" />
+				<entry key="lastName" value="LAST_NAME" />
+				<entry key="email" value="EMAIL" />
+				<entry key="personType" value="PERSON_TYPE" />
+				<entry key="displayId" value="ID" />
+			</map>
+		</property>
+
+		<property name="dbPersonTypeMap">
+			<map>
+				<entry key="A" value="Teaching Assistant" />
+				<entry key="T" value="Instructor" />
+				<entry key="S" value="Student" />
+				<entry key="E" value="Student" />
+				<entry key="U" value="Student" />
+			</map>
+		</property>
+	</bean>
+	
+	<bean id="com.zhjedu.vcle.CourseManagementDataSource" 
+			class="org.apache.commons.dbcp.BasicDataSource"
+	   		destroy-method="close">
+	  <property name="driverClassName"><value>oracle.jdbc.driver.OracleDriver</value></property>
+	  <property name="url"><value>jdbc:oracle:thin:@60.28.206.152:1521:cymid</value></property>
+	  <property name="username"><value>zhjcy</value></property>
+	  <property name="password"><value>zhjcy</value></property>
+	 </bean>
+	
+	<bean id="org.sakaiproject.user.api.UserDirectoryProvider"
+			class="com.zhjedu.vcle.UserDirectoryProviderVcleImpl"
+			singleton="true">
+		<property name="jdbcUserDirectory" ref="com.zhjedu.vcle.JdbcUserDirectory" />
+	</bean>
+
+</beans>

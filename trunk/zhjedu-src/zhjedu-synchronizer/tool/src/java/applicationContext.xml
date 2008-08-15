@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<bean id="dataSource"
+	   class="org.apache.commons.dbcp.BasicDataSource"
+	   abstract="false" singleton="true" lazy-init="default"
+	   autowire="default" dependency-check="default">
+		<property name="driverClassName"><value>oracle.jdbc.OracleDriver</value></property>
+		<property name="url"><value>jdbc:oracle:thin:@60.28.206.152:1521:cymid</value></property>
+		<property name="username"><value>zhjcy</value></property>
+		<property name="password"><value>zhjcy</value></property>
+	</bean>
+     
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		 <property name="dataSource"><ref bean="dataSource" /></property>
+     </bean> 
+     
+     <bean id="courseDao" class="com.dao.CourseDAO">
+		 <property name="jdbcTemplate"><ref bean="jdbcTemplate" /></property>
+     </bean> 
+     
+    <bean id="teacherDao" class="com.dao.TeacherDAO">
+		 <property name="jdbcTemplate"><ref bean="jdbcTemplate" /></property>
+     </bean> 
+     
+     <bean id="studentDao" class="com.dao.StudentDAO">
+		 <property name="jdbcTemplate"><ref bean="jdbcTemplate" /></property>
+     </bean>
+
+     <bean id="midCtrlDao" class="com.dao.MidCtrlDAO">
+		 <property name="jdbcTemplate"><ref bean="jdbcTemplate" /></property>
+     </bean>
+
+</beans>

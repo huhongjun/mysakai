@@ -1,0 +1,32 @@
+
+SIS接口设计思路
+	1、手工建站
+		最初级	 - UserProvider，手工建站和选人
+		中级		 - 将SIS数据同步到CM-RI中，手工建站但通过section选人
+		
+	2、自动建站
+		写一个外部程序同步用户数据，然后建站	[直接对表操作]
+		定时同步CM-RI与SIS数据，并通过SiteService、WebService建站；
+
+	3、建站之后如何生成页面并摆放工具
+		先建模板站点，然后拷贝生成新的站点
+		通过接口添加页面与工具
+		
+	补充：
+		处于调试方便可以先开发一个有手工操作界面的通过WS建站的B/S应用。
+
+主程序说明
+
+	AlterDB	
+		功能设计：
+			克隆BasicSqlService，使用local.properties中的数据库配置信息，执行alterdatabase.sql中的语句。
+			在代码中写sql初始化成绩册表；
+		实际变化：				
+			1、建表SITE_SUBJECT、USER_STATUS（同步程序专用表）；
+			2、清空CM_ACADEMIC_SESSION_T数据，插入一条初始化数据，使用户可以新建课程站点；
+
+	DBSynchronzing
+		系统初次对接时一次性同步所有数据
+		
+	DBSynchronzingListener
+		按设定的时间间隔轮询源数据库的控制表，同步最新的数据变化
