@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This is a Reload version 2.5.4 SCORM 2004 Content Package document-->
+<!--Spawned from the Reload Content Package Generator - http://www.reload.ac.uk-->
+<manifest xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" xmlns:imsmd="http://ltsc.ieee.org/xsd/LOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3" xmlns:imsss="http://www.imsglobal.org/xsd/imsss" xmlns:adlseq="http://www.adlnet.org/xsd/adlseq_v1p3" xmlns:adlnav="http://www.adlnet.org/xsd/adlnav_v1p3" identifier="MANIFEST-F601F5DF1ED88479FB99F9DFA38D478E" xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd http://ltsc.ieee.org/xsd/LOM lom.xsd http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd http://www.adlnet.org/xsd/adlseq_v1p3 adlseq_v1p3.xsd http://www.adlnet.org/xsd/adlnav_v1p3 adlnav_v1p3.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>2004 3rd Edition</schemaversion>
+  </metadata>
+  <organizations default="ORG-B6B451B4EC1F3986690ED1D0E50E9F0F">
+    <organization identifier="ORG-2C4E809C4E043750DF608ED48CC05D0A" structure="hierarchical">
+      <title>Sakai Tutorial</title>
+      <item identifier="ITEM-EF39C43A997DAC9023655BBBA25288E8" isvisible="true" identifierref="RES-8E1B7EB18B56B8B5B7A1E4861B4ACF9F">
+        <title>Calendar-Append</title>
+      </item>
+      <item identifier="ITEM-561FFCCE240885D57447929C2495FC7F" isvisible="true">
+        <title>日程管理</title>
+        <item identifier="ITEM-D632B978116CF880F3AE3832AAE17CBA" isvisible="true" identifierref="RES-0488435196E970DE7CBA51ED11702D04">
+          <title>修改日程</title>
+        </item>
+        <item identifier="ITEM-CB0CA0E5E8430BB3EF3EC0FCE4D4B1DE" isvisible="true" identifierref="RES-1B50282072661F1032C1E63B31DDC967">
+          <title>删除日程</title>
+        </item>
+        <item identifier="ITEM-0676D614B169ADB9E1FEA4C6CCD18AC1" isvisible="true" identifierref="RES-0371A600322830B702990C210559CD43">
+          <title>查看日程</title>
+        </item>
+      </item>
+      <item identifier="ITEM-38D116BD319CD280F6A0926683C9BDE6" isvisible="true">
+        <title>课程公告</title>
+        <item identifier="ITEM-1A87B150D99D8E4BE3E1D379ED2630BD" isvisible="true" identifierref="RES-61DE811D6B3778F66A1194FDE3166E1A">
+          <title>添加公告</title>
+        </item>
+        <item identifier="ITEM-F14A73B5C1E378B0EA004A4C963E83E4" isvisible="true" identifierref="RES-4C44D62359CF3B2D5206B4D24B90EAD9">
+          <title>修改公告</title>
+        </item>
+        <item identifier="ITEM-B37DB474A268E7BEC0C26F4761C6DB54" isvisible="true" identifierref="RES-F13F84F0E6980DD0149465E186E207BA">
+          <title>删除公告</title>
+        </item>
+        <item identifier="ITEM-D5B30C18585F1DDF09D331F1D0AC1D87" isvisible="true" identifierref="RES-EEE555569730C282B125142A7A0FF2AA">
+          <title>查看公告</title>
+        </item>
+      </item>
+      <item identifier="ITEM-37D8E945DFA7F562C39F0FAF94B3FB91" isvisible="true">
+        <title>课程大纲</title>
+        <item identifier="ITEM-00705CB5CECA18B9753D7C6E71678148" isvisible="true" identifierref="RES-73AAEFC766452A11ABD5787D452BAC29">
+          <title>添加大纲</title>
+        </item>
+        <item identifier="ITEM-31C1DD5E3716CF98A74EB80A0D7F1BF1" isvisible="true" identifierref="RES-FEC68D997E956BAAEB4872BF29E0B273">
+          <title>修改大纲</title>
+        </item>
+        <item identifier="ITEM-C55484F75551FEBB784B434E63A2BAF9" isvisible="true" identifierref="RES-4FF9B47748048BE9E87BD1EE035CB04E">
+          <title>删除大纲</title>
+        </item>
+        <item identifier="ITEM-541A67EA240D79404279DA5C1DC85899" isvisible="true" identifierref="RES-A890FFEE9047D561D158721410F43FF5">
+          <title>查看大纲</title>
+        </item>
+      </item>
+      <item identifier="ITEM-B69CEB35DF19D40F8AD548A3A8F7C6F9" isvisible="true">
+        <title>章节设置</title>
+        <item identifier="ITEM-FCEB8A5DC3B4FCA306F634C5B835AF85" isvisible="true" identifierref="RES-1E06841F4CA53499016198B2EFC954AB">
+          <title>添加章</title>
+        </item>
+        <item identifier="ITEM-C86F48A747E086303131F890AC30B196" isvisible="true" identifierref="RES-260BAF0C531DA769059798FE1BB21BEA">
+          <title>添加节</title>
+        </item>
+        <item identifier="ITEM-07F018E70866E4E3C669CF08C46D6DBF" isvisible="true" identifierref="RES-BF5D1B43F072D198D71A9FBABBA5412D">
+          <title>修改章节</title>
+        </item>
+        <item identifier="ITEM-5975496BCD80C033905705B5154A4217" isvisible="true" identifierref="RES-D03D8BC0314DCD75AAF29C7BB512D668">
+          <title>删除章节</title>
+        </item>
+        <item identifier="ITEM-8957336A7910B373158CF37F245AA7B9" isvisible="true" identifierref="RES-E57E61AA786CFB834BEC1A2204C9D6F9">
+          <title>显示编辑管理偏好</title>
+        </item>
+      </item>
+      <item identifier="ITEM-147D359005EE533703E3415446C8B912" isvisible="true">
+        <title>教学资料</title>
+        <item identifier="ITEM-11C56EF9E6E39C1C6A1C795D040EF27C" isvisible="true" identifierref="RES-D15BFD2342A1C436D90A2C35BBE4E755">
+          <title>添加</title>
+        </item>
+        <item identifier="ITEM-9F44A3C1E92E1B6BE8867CBB69E1AED0" isvisible="true" identifierref="RES-651F3E1156EC3F2B10D0E9269414CBDB">
+          <title>文件操作</title>
+        </item>
+        <item identifier="ITEM-F1E79EB6CD0FC0D1AAEF474A81215C05" isvisible="true" identifierref="RES-BCC0A84AED769D7DD95E8827519059F4">
+          <title>文件夹操作</title>
+        </item>
+      </item>
+      <item identifier="ITEM-B404B9A97971781903728BF79CCB8373" isvisible="true">
+        <title>作业管理</title>
+        <item identifier="ITEM-02501652548081A999E75053521AD73A" isvisible="true" identifierref="RES-AFCCF3D780AAB577A63F84F49AEE5017">
+          <title>添加作业</title>
+        </item>
+        <item identifier="ITEM-CAB2E0FEA20CA2A6207C884E9530D86E" isvisible="true" identifierref="RES-9D75C2B468E3D419BBBE4A0F18AB0231">
+          <title>修改作业</title>
+        </item>
+        <item identifier="ITEM-E2BC09E2918FE0019F9A41E02D8162DB" isvisible="true" identifierref="RES-10E55308EFD1F7D7D374AA56CE146146">
+          <title>删除作业</title>
+        </item>
+        <item identifier="ITEM-C0AEEC6A3934F2D32D2187ED58A2D270" isvisible="true" identifierref="RES-DBC1EF8F17ACC079A6047ED76A5107A9">
+          <title>查看作业</title>
+        </item>
+        <item identifier="ITEM-744FB94DE8BDBAA33D379F747F8872DB" isvisible="true" identifierref="RES-83C6B315E192B7780BF24932E23C27EA">
+          <title>评分</title>
+        </item>
+        <item identifier="ITEM-D457024CF8CCACACB8AD9CAE2FF155AB" isvisible="true" identifierref="RES-5DD24B1AB81191A3280086D5577421EE">
+          <title>提交作业</title>
+        </item>
+      </item>
+      <item identifier="ITEM-EFC49A289389500E54AA4256055025E8" isvisible="true">
+        <title>测验管理</title>
+        <item identifier="ITEM-3ECBCBFF00969B628661354B3107A60D" isvisible="true" identifierref="RES-7F2B566E1A6C0300D154D193B1BAD113">
+          <title>创建测验</title>
+        </item>
+        <item identifier="ITEM-4818351459EAD3E949B857D97BD35B33" isvisible="true" identifierref="RES-0E233ADB21275D7F343C46BD51C23B9B">
+          <title>发布测验</title>
+        </item>
+        <item identifier="ITEM-EA91CA26BF1F97A09194FB8A3767AA62" isvisible="true" identifierref="RES-752E4B7E0C16AC42111DFC8827F94A19">
+          <title>删除测验</title>
+        </item>
+        <item identifier="ITEM-6C1238B52D2D8787A429DFFC4F94E592" isvisible="true" identifierref="RES-449E97E0D8BC25C91DF7AC998E05F965">
+          <title>创建题库或了题库</title>
+        </item>
+        <item identifier="ITEM-398432C7FDCC2D74A89946D97DAD8E19" isvisible="true" identifierref="RES-B26C02018DBF9B71C5E1B4B7E4478015">
+          <title>移动题库或子题库</title>
+        </item>
+        <item identifier="ITEM-DCF5930D5F874A33B176E567E6F873A2" isvisible="true" identifierref="RES-E0061CB611A1A722A53510D04EC38404">
+          <title>复制题库或子题库</title>
+        </item>
+        <item identifier="ITEM-F86747E930E057E6E6CE9EB6FF3E29A0" isvisible="true" identifierref="RES-2F9F27ED823036A426267F3EE724411C">
+          <title>删除题库或子题库</title>
+        </item>
+        <item identifier="ITEM-4DE028C7BDD35261A6EDED81B9DADEA3" isvisible="true" identifierref="RES-D8EB96CBC65B564F6041FB521AA4FAF1">
+          <title>添加试题</title>
+        </item>
+        <item identifier="ITEM-CCC6EEA0FC7E17FA14FEFF2C61C75206" isvisible="true" identifierref="RES-D6FF093563F866BB9F4F545902FC4FF0">
+          <title>查看测验结果</title>
+        </item>
+      </item>
+      <item identifier="ITEM-0DA18F703B2B68CA6F335F834BF78E09" isvisible="true">
+        <title>查询统计</title>
+        <item identifier="ITEM-91EFE8C499A930675A4C2184C214A715" isvisible="true" identifierref="RES-29EB258B57770E5A7F7F59D7F06C1922">
+          <title>概览</title>
+        </item>
+        <item identifier="ITEM-B313A66CF462B8A05BE50AAE2DC16BB5" isvisible="true" identifierref="RES-8621FA449F6C421EAE40D3406B9163C8">
+          <title>花名册</title>
+        </item>
+        <item identifier="ITEM-C5DC98133B762BE9361F0BAAE572CE22" isvisible="true" identifierref="RES-CEAD2B832763EAFF97D653EBB6BA018E">
+          <title>添加修改删除计分作业</title>
+        </item>
+      </item>
+      <item identifier="ITEM-15DFB9BD6AB33188B4C6579E620DDCDE" isvisible="true">
+        <title>论坛管理</title>
+        <item identifier="ITEM-592AE7AE37D9CA348979D93714CF24E3" isvisible="true" identifierref="RES-A87C3AA14CD14E1A4BA14A8FF0439A01">
+          <title>添加类别</title>
+        </item>
+        <item identifier="ITEM-707FF6EE662563554C242108024418DD" isvisible="true" identifierref="RES-A14887F91666908331C17A78A6C66C93">
+          <title>添加主题</title>
+        </item>
+        <item identifier="ITEM-929E67A7B4AF2477FDB93E1E855F75CD" isvisible="true" identifierref="RES-33DCB5BCDE667644E48603128F5116BC">
+          <title>回复和查看主题</title>
+        </item>
+      </item>
+      <item identifier="ITEM-B18C61E49C7363C8583E47506234416A" isvisible="true">
+        <title>邮件管理</title>
+        <item identifier="ITEM-1A2B9EB00CB1D3387A914B0B7770FD8E" isvisible="true" identifierref="RES-FB354803464CDDFCE0AA25646199F06A">
+          <title>创建和选项</title>
+        </item>
+      </item>
+      <item identifier="ITEM-1E088D4DB50DD9B6773962B7037E6F96" isvisible="true">
+        <title>课程管理</title>
+        <item identifier="ITEM-82D4E542B52AE0E40E48D1886EE116F3" isvisible="true" identifierref="RES-DC9A9A165A68D7957D425DADD4534C3C">
+          <title>编辑课程信息</title>
+        </item>
+        <item identifier="ITEM-82265BA2256E6FEAE3F0F39CC101DCAB" isvisible="true" identifierref="RES-544A9B88640681A666BEA9C931B08588">
+          <title>编辑工具</title>
+        </item>
+        <item identifier="ITEM-8B86E84146F3E3FB9B7D285C1CE991D4" isvisible="true" identifierref="RES-82A59630EDEB4E18CF9E06AA75E3BB1D">
+          <title>管理组</title>
+        </item>
+        <item identifier="ITEM-C5BF6409444F549681ABF2C5B2CE4778" isvisible="true" identifierref="RES-6B5E8A8D8671B6A675B69D7E7BCB4D7C">
+          <title>添加参与者</title>
+        </item>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES-61DE811D6B3778F66A1194FDE3166E1A" adlcp:scormType="asset" type="webcontent" href="announcement/append.htm">
+      <file href="announcement/append.htm" />
+      <file href="announcement/image/tjg.JPG" />
+    </resource>
+    <resource identifier="RES-F13F84F0E6980DD0149465E186E207BA" adlcp:scormType="asset" type="webcontent" href="announcement/delete.htm">
+      <file href="announcement/delete.htm" />
+      <file href="announcement/image/scg.JPG" />
+      <file href="announcement/image/scg1.JPG" />
+    </resource>
+    <resource identifier="RES-4C44D62359CF3B2D5206B4D24B90EAD9" adlcp:scormType="asset" type="webcontent" href="announcement/update.htm">
+      <file href="announcement/update.htm" />
+      <file href="announcement/image/sgg.JPG" />
+    </resource>
+    <resource identifier="RES-EEE555569730C282B125142A7A0FF2AA" adlcp:scormType="asset" type="webcontent" href="announcement/view.htm">
+      <file href="announcement/view.htm" />
+      <file href="announcement/image/ck1.JPG" />
+      <file href="announcement/image/ck2.JPG" />
+      <file href="announcement/image/ck3.JPG" />
+    </resource>
+    <resource identifier="RES-AFCCF3D780AAB577A63F84F49AEE5017" adlcp:scormType="asset" type="webcontent" href="assignment/append.htm">
+      <file href="assignment/append.htm" />
+      <file href="assignment/image/tjzy1.JPG" />
+      <file href="assignment/image/tjzy2.JPG" />
+    </resource>
+    <resource identifier="RES-10E55308EFD1F7D7D374AA56CE146146" adlcp:scormType="asset" type="webcontent" href="assignment/delete.htm">
+      <file href="assignment/delete.htm" />
+      <file href="assignment/image/sczy1-1.JPG" />
+      <file href="assignment/image/sczy2-1.JPG" />
+    </resource>
+    <resource identifier="RES-83C6B315E192B7780BF24932E23C27EA" adlcp:scormType="asset" type="webcontent" href="assignment/grade.htm">
+      <file href="assignment/grade.htm" />
+      <file href="assignment/image/pf1.JPG" />
+      <file href="assignment/image/pf2.JPG" />
+      <file href="assignment/image/pf3.JPG" />
+    </resource>
+    <resource identifier="RES-5DD24B1AB81191A3280086D5577421EE" adlcp:scormType="asset" type="webcontent" href="assignment/refer.htm">
+      <file href="assignment/refer.htm" />
+      <file href="assignment/image/tjz1.JPG" />
+      <file href="assignment/image/tjz2.JPG" />
+    </resource>
+    <resource identifier="RES-9D75C2B468E3D419BBBE4A0F18AB0231" adlcp:scormType="asset" type="webcontent" href="assignment/update.htm">
+      <file href="assignment/update.htm" />
+      <file href="assignment/image/xgzy.JPG" />
+    </resource>
+    <resource identifier="RES-DBC1EF8F17ACC079A6047ED76A5107A9" adlcp:scormType="asset" type="webcontent" href="assignment/view.htm">
+      <file href="assignment/view.htm" />
+      <file href="assignment/image/ckzy1.JPG" />
+      <file href="assignment/image/ckzy2.JPG" />
+      <file href="assignment/image/ckzy3.JPG" />
+      <file href="assignment/image/ckzy4.JPG" />
+      <file href="assignment/image/ckzy5.JPG" />
+      <file href="assignment/image/ckzy6.JPG" />
+      <file href="assignment/image/ckzy7.JPG" />
+    </resource>
+    <resource identifier="RES-8E1B7EB18B56B8B5B7A1E4861B4ACF9F" adlcp:scormType="asset" type="webcontent" href="calendar/append.htm">
+      <file href="calendar/append.htm" />
+      <file href="calendar/image/tj1.JPG" />
+    </resource>
+    <resource identifier="RES-1B50282072661F1032C1E63B31DDC967" adlcp:scormType="asset" type="webcontent" href="calendar/delete.htm">
+      <file href="calendar/delete.htm" />
+      <file href="calendar/image/sc1.JPG" />
+      <file href="calendar/image/sc2.JPG" />
+    </resource>
+    <resource identifier="RES-0488435196E970DE7CBA51ED11702D04" adlcp:scormType="asset" type="webcontent" href="calendar/update.htm">
+      <file href="calendar/update.htm" />
+      <file href="calendar/image/xg1.JPG" />
+      <file href="calendar/image/xg2.JPG" />
+    </resource>
+    <resource identifier="RES-0371A600322830B702990C210559CD43" adlcp:scormType="asset" type="webcontent" href="calendar/view.htm">
+      <file href="calendar/view.htm" />
+      <file href="calendar/image/sk1.JPG" />
+      <file href="calendar/image/sk2.JPG" />
+    </resource>
+    <resource identifier="RES-1E06841F4CA53499016198B2EFC954AB" adlcp:scormType="asset" type="webcontent" href="chapter/appendchapter.htm">
+      <file href="chapter/appendchapter.htm" />
+      <file href="chapter/image/tjz.JPG" />
+      <file href="chapter/image/tjz1.JPG" />
+      <file href="chapter/image/tjz2.JPG" />
+    </resource>
+    <resource identifier="RES-260BAF0C531DA769059798FE1BB21BEA" adlcp:scormType="asset" type="webcontent" href="chapter/appendnode.htm">
+      <file href="chapter/appendnode.htm" />
+      <file href="chapter/image/tjj.JPG" />
+      <file href="chapter/image/tjj1.JPG" />
+      <file href="chapter/image/tjj2.JPG" />
+    </resource>
+    <resource identifier="RES-D03D8BC0314DCD75AAF29C7BB512D668" adlcp:scormType="asset" type="webcontent" href="chapter/delete.htm">
+      <file href="chapter/delete.htm" />
+      <file href="chapter/image/sczj.JPG" />
+      <file href="chapter/image/sczj1.JPG" />
+      <file href="chapter/image/sczj2.JPG" />
+      <file href="chapter/image/sczj3.JPG" />
+    </resource>
+    <resource identifier="RES-BF5D1B43F072D198D71A9FBABBA5412D" adlcp:scormType="asset" type="webcontent" href="chapter/update.htm">
+      <file href="chapter/update.htm" />
+      <file href="chapter/image/xgzj.JPG" />
+    </resource>
+    <resource identifier="RES-E57E61AA786CFB834BEC1A2204C9D6F9" adlcp:scormType="asset" type="webcontent" href="chapter/viewedit.htm">
+      <file href="chapter/viewedit.htm" />
+      <file href="chapter/image/gl1.JPG" />
+      <file href="chapter/image/gl2.JPG" />
+      <file href="chapter/image/sczj3.JPG" />
+      <file href="chapter/image/xs.JPG" />
+      <file href="chapter/image/zz.JPG" />
+    </resource>
+    <resource identifier="RES-D15BFD2342A1C436D90A2C35BBE4E755" adlcp:scormType="asset" type="webcontent" href="content/append.htm">
+      <file href="content/append.htm" />
+      <file href="content/image/cjlj1.JPG" />
+      <file href="content/image/cjlj2.JPG" />
+      <file href="content/image/cjwb1.JPG" />
+      <file href="content/image/cjwb2.JPG" />
+      <file href="content/image/cjwb3.JPG" />
+      <file href="content/image/cjwj1.JPG" />
+      <file href="content/image/cjwj2.JPG" />
+      <file href="content/image/HTMLym1.JPG" />
+      <file href="content/image/HTMLym2.JPG" />
+      <file href="content/image/HTMLym3.JPG" />
+      <file href="content/image/scwj1.JPG" />
+      <file href="content/image/scwj2.JPG" />
+    </resource>
+    <resource identifier="RES-651F3E1156EC3F2B10D0E9269414CBDB" adlcp:scormType="asset" type="webcontent" href="content/file.htm">
+      <file href="content/file.htm" />
+      <file href="content/image/fz1.JPG" />
+      <file href="content/image/fz2.JPG" />
+      <file href="content/image/kb1.JPG" />
+      <file href="content/image/kb2.JPG" />
+      <file href="content/image/kb3.JPG" />
+      <file href="content/image/sc1.JPG" />
+      <file href="content/image/sc2.JPG" />
+      <file href="content/image/shc1.JPG" />
+      <file href="content/image/shc2.JPG" />
+      <file href="content/image/xgnr1.JPG" />
+      <file href="content/image/xgnr2.JPG" />
+      <file href="content/image/xgxj1.JPG" />
+      <file href="content/image/xgxj2.JPG" />
+      <file href="content/image/yd1.JPG" />
+      <file href="content/image/yd2.JPG" />
+      <file href="content/image/yd3.JPG" />
+    </resource>
+    <resource identifier="RES-BCC0A84AED769D7DD95E8827519059F4" adlcp:scormType="asset" type="webcontent" href="content/folder.htm">
+      <file href="content/folder.htm" />
+      <file href="content/image/px1.JPG" />
+      <file href="content/image/px2.JPG" />
+      <file href="content/image/xqx1.JPG" />
+      <file href="content/image/xqx2.JPG" />
+    </resource>
+    <resource identifier="RES-A87C3AA14CD14E1A4BA14A8FF0439A01" adlcp:scormType="asset" type="webcontent" href="discussion/appendsort.htm">
+      <file href="discussion/appendsort.htm" />
+      <file href="discussion/image/tjlb1.JPG" />
+      <file href="discussion/image/tjlb2.JPG" />
+      <file href="discussion/image/tjlb3.JPG" />
+      <file href="discussion/image/tjlb4.JPG" />
+    </resource>
+    <resource identifier="RES-A14887F91666908331C17A78A6C66C93" adlcp:scormType="asset" type="webcontent" href="discussion/appendtheme.htm">
+      <file href="discussion/appendtheme.htm" />
+      <file href="discussion/image/tjzt1.JPG" />
+      <file href="discussion/image/tjzt2.JPG" />
+      <file href="discussion/image/tjzt3.JPG" />
+      <file href="discussion/image/tjzt4.JPG" />
+    </resource>
+    <resource identifier="RES-33DCB5BCDE667644E48603128F5116BC" adlcp:scormType="asset" type="webcontent" href="discussion/revert&amp;view.htm">
+      <file href="discussion/revert&amp;view.htm" />
+      <file href="discussion/image/ckzt.JPG" />
+      <file href="discussion/image/hfzt1.JPG" />
+      <file href="discussion/image/hfzt2.JPG" />
+    </resource>
+    <resource identifier="RES-FB354803464CDDFCE0AA25646199F06A" adlcp:scormType="asset" type="webcontent" href="email/create&amp;option.htm">
+      <file href="email/create&amp;option.htm" />
+      <file href="email/image/yjgl.JPG" />
+      <file href="email/image/yjgl1.JPG" />
+      <file href="email/image/yjgl2.JPG" />
+    </resource>
+    <resource identifier="RES-CEAD2B832763EAFF97D653EBB6BA018E" adlcp:scormType="asset" type="webcontent" href="gradebook/append&amp;update&amp;delete.htm">
+      <file href="gradebook/append&amp;update&amp;delete.htm" />
+      <file href="gradebook/image/tjzy1.JPG" />
+      <file href="gradebook/image/tjzy2.JPG" />
+      <file href="gradebook/image/tjzy3.JPG" />
+      <file href="gradebook/image/tjzy4.JPG" />
+      <file href="gradebook/image/tjzy5.JPG" />
+    </resource>
+    <resource identifier="RES-8621FA449F6C421EAE40D3406B9163C8" adlcp:scormType="asset" type="webcontent" href="gradebook/roster.htm">
+      <file href="gradebook/roster.htm" />
+      <file href="gradebook/image/hmc.JPG" />
+    </resource>
+    <resource identifier="RES-29EB258B57770E5A7F7F59D7F06C1922" adlcp:scormType="asset" type="webcontent" href="gradebook/summary.htm">
+      <file href="gradebook/summary.htm" />
+      <file href="gradebook/image/gl1.JPG" />
+      <file href="gradebook/image/gl2.JPG" />
+      <file href="gradebook/image/gl3.JPG" />
+      <file href="gradebook/image/gl4.JPG" />
+      <file href="gradebook/image/gl5.JPG" />
+      <file href="gradebook/image/gl6.JPG" />
+    </resource>
+    <resource identifier="RES-D8EB96CBC65B564F6041FB521AA4FAF1" adlcp:scormType="asset" type="webcontent" href="sam/appendtheme.htm">
+      <file href="sam/appendtheme.htm" />
+      <file href="sam/image/tjst1.JPG" />
+      <file href="sam/image/tjst2.JPG" />
+      <file href="sam/image/tjst3.JPG" />
+      <file href="sam/image/tjst4.JPG" />
+      <file href="sam/image/tjst5.JPG" />
+      <file href="sam/image/tjst6.JPG" />
+      <file href="sam/image/tjst7.JPG" />
+    </resource>
+    <resource identifier="RES-E0061CB611A1A722A53510D04EC38404" adlcp:scormType="asset" type="webcontent" href="sam/copytiku.htm">
+      <file href="sam/copytiku.htm" />
+      <file href="sam/image/fztk1.JPG" />
+      <file href="sam/image/fztk2.JPG" />
+      <file href="sam/image/fztk3.JPG" />
+    </resource>
+    <resource identifier="RES-7F2B566E1A6C0300D154D193B1BAD113" adlcp:scormType="asset" type="webcontent" href="sam/create.htm">
+      <file href="sam/create.htm" />
+      <file href="sam/image/cjcy1.JPG" />
+      <file href="sam/image/cjcy10.JPG" />
+      <file href="sam/image/cjcy11.JPG" />
+      <file href="sam/image/cjcy2.JPG" />
+      <file href="sam/image/cjcy3.JPG" />
+      <file href="sam/image/cjcy4.JPG" />
+      <file href="sam/image/cjcy5.JPG" />
+      <file href="sam/image/cjcy6.JPG" />
+      <file href="sam/image/cjcy7.JPG" />
+      <file href="sam/image/cjcy8.JPG" />
+      <file href="sam/image/cjcy9.JPG" />
+    </resource>
+    <resource identifier="RES-449E97E0D8BC25C91DF7AC998E05F965" adlcp:scormType="asset" type="webcontent" href="sam/createtiku.htm">
+      <file href="sam/createtiku.htm" />
+      <file href="sam/image/tjtk1.JPG" />
+      <file href="sam/image/tjtk2.JPG" />
+      <file href="sam/image/tjtk3.JPG" />
+      <file href="sam/image/tjtk4.JPG" />
+      <file href="sam/image/tjztk1.JPG" />
+      <file href="sam/image/tjztk2.JPG" />
+      <file href="sam/image/tjztk3.JPG" />
+    </resource>
+    <resource identifier="RES-752E4B7E0C16AC42111DFC8827F94A19" adlcp:scormType="asset" type="webcontent" href="sam/delete.htm">
+      <file href="sam/delete.htm" />
+      <file href="sam/image/sccy1.JPG" />
+      <file href="sam/image/sccy2.JPG" />
+    </resource>
+    <resource identifier="RES-2F9F27ED823036A426267F3EE724411C" adlcp:scormType="asset" type="webcontent" href="sam/deletetiku.htm">
+      <file href="sam/deletetiku.htm" />
+      <file href="sam/image/sctk1.JPG" />
+      <file href="sam/image/sctk2.JPG" />
+    </resource>
+    <resource identifier="RES-0E233ADB21275D7F343C46BD51C23B9B" adlcp:scormType="asset" type="webcontent" href="sam/issue.htm">
+      <file href="sam/issue.htm" />
+      <file href="sam/image/fbcy1.JPG" />
+      <file href="sam/image/fbcy2.JPG" />
+      <file href="sam/image/fbcy3.JPG" />
+      <file href="sam/image/fbcy4.JPG" />
+    </resource>
+    <resource identifier="RES-B26C02018DBF9B71C5E1B4B7E4478015" adlcp:scormType="asset" type="webcontent" href="sam/movetiku.htm">
+      <file href="sam/movetiku.htm" />
+      <file href="sam/image/ydtk1.JPG" />
+      <file href="sam/image/ydtk2.JPG" />
+      <file href="sam/image/ydtk3.JPG" />
+      <file href="sam/image/ydtk4.JPG" />
+      <file href="sam/image/ydtk5.JPG" />
+    </resource>
+    <resource identifier="RES-91F59E50928150F05B47ED1AEB9649F9" adlcp:scormType="asset" type="webcontent" href="sam/take%20an%20test.htm">
+      <file href="sam/take%20an%20test.htm" />
+      <file href="sam/image/xcjcy1.JPG" />
+      <file href="sam/image/xcjcy2.JPG" />
+      <file href="sam/image/xcjcy3.JPG" />
+      <file href="sam/image/xcjcy4.JPG" />
+      <file href="sam/image/xcjcy5.JPG" />
+      <file href="sam/image/xcjcy6.JPG" />
+      <file href="sam/image/xcjcy7.JPG" />
+      <file href="sam/image/xcjcy8.JPG" />
+      <file href="sam/image/xcjcy9.JPG" />
+    </resource>
+    <resource identifier="RES-D6FF093563F866BB9F4F545902FC4FF0" adlcp:scormType="asset" type="webcontent" href="sam/view.htm">
+      <file href="sam/view.htm" />
+      <file href="sam/image/ckjg1.JPG" />
+      <file href="sam/image/ckjg2.JPG" />
+      <file href="sam/image/ckjg3.JPG" />
+      <file href="sam/image/ckjg4.JPG" />
+      <file href="sam/image/ckjg5.JPG" />
+      <file href="sam/image/ckjg6.JPG" />
+    </resource>
+    <resource identifier="RES-6B5E8A8D8671B6A675B69D7E7BCB4D7C" adlcp:scormType="asset" type="webcontent" href="site/appendactor.htm">
+      <file href="site/appendactor.htm" />
+      <file href="site/image/tjcyz1.JPG" />
+      <file href="site/image/tjcyz2.JPG" />
+      <file href="site/image/tjcyz3.JPG" />
+      <file href="site/image/tjcyz4.JPG" />
+      <file href="site/image/tjcyz5.JPG" />
+      <file href="site/image/tjcyz6.JPG" />
+    </resource>
+    <resource identifier="RES-DC9A9A165A68D7957D425DADD4534C3C" adlcp:scormType="asset" type="webcontent" href="site/editinfo.htm">
+      <file href="site/editinfo.htm" />
+      <file href="site/image/bjkc1.JPG" />
+      <file href="site/image/bjkc2.JPG" />
+    </resource>
+    <resource identifier="RES-544A9B88640681A666BEA9C931B08588" adlcp:scormType="asset" type="webcontent" href="site/edittool.htm">
+      <file href="site/edittool.htm" />
+      <file href="site/image/bjgj1.JPG" />
+      <file href="site/image/bjgj2.JPG" />
+      <file href="site/image/bjgj3.JPG" />
+    </resource>
+    <resource identifier="RES-82A59630EDEB4E18CF9E06AA75E3BB1D" adlcp:scormType="asset" type="webcontent" href="site/manage.htm">
+      <file href="site/manage.htm" />
+      <file href="site/image/glz1.JPG" />
+      <file href="site/image/glz2.JPG" />
+      <file href="site/image/glz3.JPG" />
+      <file href="site/image/glz4.JPG" />
+      <file href="site/image/glz5.JPG" />
+      <file href="site/image/glz6.JPG" />
+    </resource>
+    <resource identifier="RES-73AAEFC766452A11ABD5787D452BAC29" adlcp:scormType="asset" type="webcontent" href="syllabus/append.htm">
+      <file href="syllabus/append.htm" />
+      <file href="syllabus/image/tj1.JPG" />
+      <file href="syllabus/image/tj2.JPG" />
+    </resource>
+    <resource identifier="RES-4FF9B47748048BE9E87BD1EE035CB04E" adlcp:scormType="asset" type="webcontent" href="syllabus/delete.htm">
+      <file href="syllabus/delete.htm" />
+      <file href="syllabus/image/scd1.JPG" />
+      <file href="syllabus/image/scd2.JPG" />
+    </resource>
+    <resource identifier="RES-FEC68D997E956BAAEB4872BF29E0B273" adlcp:scormType="asset" type="webcontent" href="syllabus/update.htm">
+      <file href="syllabus/update.htm" />
+      <file href="syllabus/image/sgd.JPG" />
+    </resource>
+    <resource identifier="RES-A890FFEE9047D561D158721410F43FF5" adlcp:scormType="asset" type="webcontent" href="syllabus/view.htm">
+      <file href="syllabus/view.htm" />
+      <file href="syllabus/image/ck2.JPG" />
+      <file href="syllabus/image/ck3.JPG" />
+    </resource>
+  </resources>
+</manifest>
+
