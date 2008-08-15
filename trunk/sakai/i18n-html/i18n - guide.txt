@@ -1,0 +1,54 @@
+BeyondCompare
+	过滤设置：*.htm;*.html;-target\;-.svn\;-...
+	
+ＳＶＮ的使用经验
+	先导入原始的文件版本，便于比较
+
+ＨＴＭＬ
+	注意空格
+	
+说明：【目前只翻译高优先级的】
+	H - 高优先级；M - 中优先级；L - 暂不翻译
+	
+重点翻译【 目录 | 优先级 】
+	announcement					H
+		\announcement-help\src\
+			sakai_announcements
+	calendar						H
+		\calendar-help\src\
+			sakai_schedule
+	content						H
+		\content-help\src\
+			sakai_dropbox
+			sakai_resources
+	help
+		\help\src\
+			sakai_accessibility			H
+			sakai_admin_tool
+			sakai_course_sites
+			sakai_iframe_myworkspace
+			sakai_menubar			H
+			sakai_permissions
+		help-tool
+	mailarchive
+		\mailarchive-help\src\
+			sakai_mailbox
+	mailtool						H
+		\help\src\
+			sakai_mailtool
+	rwiki
+		\rwiki-help\src\
+			sakai_rwiki
+	melete
+	site
+		\site-help\src\
+			sakai_sites
+	site-manage
+		\site-manage-help\src\
+			sakai_siteinfo
+	syllabus						H
+		\help\src\
+			sakai_syllabus
+	usermembership
+		\help\src\
+			sakai_usermembership
