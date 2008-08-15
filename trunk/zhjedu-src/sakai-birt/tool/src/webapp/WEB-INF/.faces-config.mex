@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JSFFlowViewLayout version="1.0">
+  <Drawing gridVisible="true" snapOn="true" />
+  <JSFFlowResource path="/birt/*" location="20,20" dimension="74,36" />
+  <JSFFlowResource path="/birt/reportViewer.jsp" location="240,20" dimension="148,36" />
+  <JSFFlowNavigationCase id="/birt/*,/birt/reportViewer.jsp,ReportViewer,null" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="94,38" />
+      <AbsolutePoint location="240,38" />
+    </AutomaticBendpoints>
+  </JSFFlowNavigationCase>
+</JSFFlowViewLayout>
+
