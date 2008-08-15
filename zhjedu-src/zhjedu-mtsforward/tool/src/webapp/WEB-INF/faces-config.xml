@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE faces-config PUBLIC
+  "-//Sun Microsystems, Inc.//DTD JavaServer Faces Config 1.0//EN"
+  "http://java.sun.com/dtd/web-facesconfig_1_0.dtd">
+<faces-config>
+	<application>
+    	<message-bundle>org.sakaiproject.sitestats.tool.bundle.Messages</message-bundle>
+    	<locale-config>
+      		<default-locale>zh_CN</default-locale>
+      		<supported-locale>en_US</supported-locale>
+      		<supported-locale>zh_CN</supported-locale>
+    	</locale-config>
+  	</application>
+  	
+	<!-- Message Bundle -->
+    <managed-bean>
+		<description>Dynamic Resource Bundle Loader</description>
+		<managed-bean-name>msgs</managed-bean-name>
+		<managed-bean-class>org.sakaiproject.util.ResourceLoader</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<description>Bundle baseName</description>
+			<property-name>baseName</property-name>
+			<value>org.sakaiproject.tool.mtsforward.bundle.Messages</value>
+		</managed-property>
+	</managed-bean>
+    
+	<!-- Navigation Rules: Task List -->
+    <navigation-rule>
+		<from-view-id>/mtsforward/*</from-view-id>
+		<navigation-case>
+			<from-outcome>MtsForward</from-outcome>
+			<to-view-id>/mtsforward/mtsForward.jsp</to-view-id>
+		</navigation-case>
+
+	</navigation-rule>
+
+</faces-config>

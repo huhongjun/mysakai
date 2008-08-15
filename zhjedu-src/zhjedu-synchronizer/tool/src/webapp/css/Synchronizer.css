@@ -1,0 +1,55 @@
+
+/* Column classes */
+.colSelect {
+    text-align: center; 
+}
+.colComplete {
+	text-align: center;
+	vertical-align: bottom;
+}
+.colItem {
+    width: 35%;
+	text-align: left;
+}
+.colOwner {
+    width: 20%;
+	text-align: left;
+}
+.colCreationDate {
+    width: 15%;
+	text-align: left;
+}
+.colDueDate {
+    width: 15%;
+	text-align: left;
+}
+.colCompletionDate {
+    width: 15%;
+	text-align: left;
+}
+
+
+/* Add item panel */
+.addItem {
+	text-align: left;
+}
+.addItemFull {
+	width: 100%;
+	text-align: left;
+}
+
+
+/* Table items */
+.24hTask {
+	/*color: blue;*/
+}
+.dueTask {
+	color: red;	
+}
+.futureTask {
+	
+}
+.completeTask {
+	color: gray;
+	text-decoration: line-through;  
+}

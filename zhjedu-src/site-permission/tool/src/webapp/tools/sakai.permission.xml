@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<registration>
+	<tool id="sakai.permission"
+		title="Site Permission Management"
+		description="Permission management inside site">
+		<category name="myworkspace" />
+		<category name="course" />
+		<category name="project" />
+	</tool>	 
+</registration>

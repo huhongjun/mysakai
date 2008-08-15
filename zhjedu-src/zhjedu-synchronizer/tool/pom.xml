@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>tasklist</artifactId>
+		<groupId>org.sakaiproject</groupId>
+		<version>M2</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+	
+	<name>Tasklist Tool</name>
+	<groupId>org.sakaiproject</groupId>
+	<artifactId>sakai-tasklist-tool</artifactId>
+	<organization>
+		<name>Sakai Project</name>
+		<url>http://sakaiproject.org/</url>
+	</organization>
+	<inceptionYear>2006</inceptionYear>
+
+	<packaging>war</packaging>
+
+	<dependencies>
+	
+		<dependency>
+			<groupId>org.sakaiproject</groupId>
+			<artifactId>sakai-tasklist-model-api</artifactId>
+			<version>${sakai.version}</version>
+            <scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.sakaiproject</groupId>
+			<artifactId>sakai-tasklist-logic-api</artifactId>
+			<version>${sakai.version}</version>
+            <scope>provided</scope>
+		</dependency>
+
+		<!-- Sakai -->
+		<dependency>
+			<groupId>org.sakaiproject</groupId>
+			<artifactId>sakai-util</artifactId>
+			<version>${sakai.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.sakaiproject</groupId>
+			<artifactId>sakai-site-api</artifactId>
+			<version>${sakai.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.sakaiproject</groupId>
+			<artifactId>sakai-tool-api</artifactId>
+			<version>${sakai.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.sakaiproject</groupId>
+			<artifactId>sakai-authz-api</artifactId>
+			<version>${sakai.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.sakaiproject</groupId>
+			<artifactId>sakai-user-api</artifactId>
+			<version>${sakai.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.sakaiproject</groupId>
+			<artifactId>sakai-entity-api</artifactId>
+			<version>${sakai.version}</version>
+		</dependency>
+
+		<!-- JSF -->
+		<dependency>
+			<groupId>org.sakaiproject</groupId>
+			<artifactId>sakai-depend-jsf-widgets-myfaces</artifactId>
+			<version>${sakai.version}</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>org.sakaiproject</groupId>
+			<artifactId>sakai-jsf-tool</artifactId>
+			<version>${sakai.version}</version>
+		</dependency>
+        <dependency>
+              <groupId>org.sakaiproject</groupId>
+              <artifactId>sakai-jsf-app</artifactId>
+              <version>${sakai.version}</version>
+              <exclusions>
+                <exclusion>
+                        <groupId>jsf</groupId>
+                        <artifactId>jsf-api</artifactId>
+                </exclusion>
+              </exclusions>
+        </dependency>
+        <!-- MyFaces JSF -->
+        <dependency>
+        	<groupId>org.apache.myfaces.core</groupId>
+        	<artifactId>myfaces-api</artifactId>
+        	<version>1.1.5</version>
+        </dependency>
+        <dependency>
+        	<groupId>org.apache.myfaces.core</groupId>
+        	<artifactId>myfaces-impl</artifactId>
+        	<version>1.1.5</version>
+        </dependency>
+        <dependency>
+        	<groupId>org.apache.myfaces.tomahawk</groupId>
+        	<artifactId>tomahawk</artifactId>
+        	<version>1.1.6</version>
+        	<exclusions>
+        		<exclusion>
+        			<!-- shared -->
+        			<groupId>antlr</groupId>
+        			<artifactId>antlr</artifactId>
+        		</exclusion>
+        	</exclusions>
+        </dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.0.4</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>${sakai.servletapi.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.0</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>${basedir}/src/bundle</directory>
+				<includes>
+					<include>**/*.properties</include>
+				</includes>
+			</resource>
+			<resource>
+				<directory>${basedir}/src/java</directory>
+				<includes>
+					<include>**/*.xsl</include>
+				</includes>
+			</resource>
+		</resources>
+	</build>
+</project>

@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE faces-config PUBLIC
+  "-//Sun Microsystems, Inc.//DTD JavaServer Faces Config 1.0//EN"
+  "http://java.sun.com/dtd/web-facesconfig_1_0.dtd">
+<faces-config>
+	<application>
+        <message-bundle>org.sakaiproject.tool.synchronizer.bundle.Messages</message-bundle>
+        <locale-config>
+            <default-locale>zh_CN</default-locale>
+        </locale-config>
+    </application>
+    
+	<!-- Message Bundle -->
+    <managed-bean>
+		<description>Dynamic Resource Bundle Loader</description>
+		<managed-bean-name>msgs</managed-bean-name>
+		<managed-bean-class>org.sakaiproject.util.ResourceLoader</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<description>Bundle baseName</description>
+			<property-name>baseName</property-name>
+			<value>org.sakaiproject.tool.synchronizer.bundle.Messages</value>
+		</managed-property>
+	</managed-bean>
+    
+    <!-- HTML table sort header renderer -->
+
+	<!-- Navigation Rules: Task List -->
+    <navigation-rule>
+		<from-view-id>/synchronizer/*</from-view-id>
+		<navigation-case>
+			<from-outcome>index</from-outcome>
+			<to-view-id>/synchronizer/Synchronizer.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+    <!-- Backing Bean: Task List -->
+    <managed-bean>
+        <description>Synchronizer Tool: synchronizer Bean</description>
+        <managed-bean-name>SynchronizerBean</managed-bean-name>
+        <managed-bean-class>org.sakaiproject.synchronizer.tool.jsf.SynchronizerBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+		<property-name>toolsMap</property-name>
+			<map-entries>
+			<key-class>java.lang.String</key-class>
+			<value-class>java.lang.String</value-class>
+				<map-entry><key>sakai.siteinfo</key><value>课程信息</value></map-entry>
+				<map-entry><key>sakai.schedule</key><value>日程管理</value></map-entry>
+				<map-entry><key>sakai.resources</key><value>课程资源</value></map-entry>
+				<map-entry><key>sakai.melete</key><value>课程章节</value></map-entry>
+				<map-entry><key>sakai.syllabus</key><value>课程大纲</value></map-entry>
+				<map-entry><key>sakai.announcements</key><value>课程公告</value></map-entry>
+				<map-entry><key>sakai.rwiki</key><value>课程笔记</value></map-entry>				
+				<map-entry><key>sakai.permission</key><value>助教管理</value></map-entry>
+				<map-entry><key>sakai.jforum.tool</key><value>课程论坛</value></map-entry>
+				<map-entry><key>sakai.mailtool</key><value>邮件工具</value></map-entry>
+				<map-entry><key>sakai.mtsforward</key><value>课程作业</value></map-entry>
+				<map-entry><key>sakai.birt</key><value>查询统计</value></map-entry>			
+			</map-entries>
+		</managed-property>        
+    </managed-bean>	
+    
+</faces-config>

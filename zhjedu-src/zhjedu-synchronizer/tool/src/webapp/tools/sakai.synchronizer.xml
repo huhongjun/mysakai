@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<registration>
+	<tool id="sakai.synchronizer"
+		title="Zhjedu.com SIS Integration"
+		description="import sis data from zhjedu sis ">
+    	<category name="sakai.admin" />
+	</tool>	 
+</registration>
