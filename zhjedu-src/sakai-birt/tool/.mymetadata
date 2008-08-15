@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="sakai-birt-tool"
+  id="myeclipse.1209202850654"
+  context-root="/sakai-birt-tool"
+  j2ee-spec="5.0"
+  archive="sakai-birt-tool.war">
+  <attributes>
+    <attribute name="webrootdir" value="src/webapp" />
+  </attributes>
+</project-module>
+
