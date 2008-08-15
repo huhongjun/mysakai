@@ -1,0 +1,34 @@
+C:\opt\mysql\>
+mysql -u root -p
+Enter password: ******
+Welcome to the MySQL monitor. Commands end with ; or \g.
+
+Your MySQL connection id is 51 to server version: 4.1.5-gamma-nt
+
+Type 'help;' or '\h' for help. Type '\c' to clear the buffer.
+
+mysql> create database sakai default character set utf8;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> grant all on sakai.* to sakaiuser@'localhost' identified by 'sakaipassword';
+Query OK, 0 rows affected (0.00 sec
+
+mysql> grant all on sakai.* to sakaiuser@'127.0.0.1' identified by 'sakaipassword';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> quit
+
+
+================================================
+SQL> select value from nls_database_parameters where parameter = 'NLS_CHARACTERSET';
+
+VALUE
+--------------------------------------------------------------------------------
+AL32UTF8
+
+
+
+--------------------------------------------------------------------------------
+Linux 下表名大小写敏感，可在my.cnf中配置
+
+在将windows下的mysql数据库的数据文件直接拷贝到Linux下时发现此问题。

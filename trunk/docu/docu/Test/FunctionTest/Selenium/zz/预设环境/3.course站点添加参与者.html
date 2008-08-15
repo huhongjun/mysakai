@@ -1,0 +1,129 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>3.course站点添加参与者</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">3.course站点添加参与者</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://192.168.0.89:8080/portal/site/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : My Workspace : Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//li[2]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : 主页</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[19]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : Site Info</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=添加参与者</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>noEmailInIdAccount</td>
+	<td>d<br />e<br />w<br />q<br />r</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>same_role_false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>eventSubmit_doContinue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>role1</td>
+	<td>label=Student</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>role2</td>
+	<td>label=Student</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>role3</td>
+	<td>label=Student</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>role4</td>
+	<td>label=Student</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>role5</td>
+	<td>label=Teaching Assistant</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>eventSubmit_doContinue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>eventSubmit_doContinue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doAdd_participant</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/ul/li[1]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : 主页</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

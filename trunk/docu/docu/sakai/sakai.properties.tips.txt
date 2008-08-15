@@ -1,0 +1,11 @@
+Start with reference/docs/sakai.properties
+	Branding
+		ui.institution 	The name of the organization associated with this Sakai installation (such as "My University"). 
+		ui.service 		The local brand for Sakai within the institution. Among other things, this text is displayed at the root of the bread crumb bar that appears within Sakai. 
+		serverId 		A unique identifier for the particular application server Sakai is running on. This is used to distinguish nodes in a clustered environment from one another.
+		serverUrl 		The full service URL for this installation of Sakai 
+		serverName 	The server name for this installation of Sakai (this should match the value for serverUrl).
+
+	Database Settings
+	Content Settings
+	Email Settings

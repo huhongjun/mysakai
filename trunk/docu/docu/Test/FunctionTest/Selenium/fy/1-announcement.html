@@ -1,0 +1,319 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>1-announcement</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">1-announcement</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://192.168.0.89:8080/portal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Gateway : Welcome</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>eid</td>
+	<td>fy</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>pw</td>
+	<td>123</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : My Workspace : Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[3]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : fy : 主页</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/ul/li[2]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : fy : Announcements</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=更改</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>pubview</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>hidden_true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>post</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=合并</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>site1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doUpdate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=主题</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//img[@alt='按标题升序排列']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//img[@alt='按标题降序排列']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=日期</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//img[@alt='按日期升序排列']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//img[@alt='按日期降序排列']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Options</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>sortableWithBody</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doUpdate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doDeleteannouncement</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Options</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>showList</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doUpdate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>selectPageSize</td>
+	<td>label=显示20项…</td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>selectPageSize</td>
+	<td>label=显示5项…</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=权限</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>accessannc.new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>accessannc.delete.any</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>accessannc.delete.own</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>accessannc.revise.any</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>accessannc.revise.own</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>accessannc.all.groups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>accessannc.read.drafts</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doSave</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=权限</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>accessannc.delete.any</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>accessannc.delete.own</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>accessannc.revise.any</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>accessannc.revise.own</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>accessannc.all.groups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>accessannc.read.drafts</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>accessannc.new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doSave</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Options</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>sortable</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doUpdate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=合并</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>site1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doUpdate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=更改</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>pubview</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>hidden_false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>site</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>post</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

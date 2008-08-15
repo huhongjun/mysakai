@@ -1,0 +1,51 @@
+1、表名：MELETE_MODULE(章)
+
+	"MODULE_ID" NUMBER(10) not null,      		章的ID（主键兼唯一索引）
+	"VERSION" NUMBER(10) not null,        			版本号
+	"TITLE" VARCHAR2(150) not null,       			章的标题
+	"LEARN_OBJ" CLOB,
+	"DESCRIPTION" CLOB,                      			章的描述
+	"KEYWORDS" VARCHAR2(750) not null,
+	"CREATED_BY_FNAME" VARCHAR2(150) not null,  	创建人的名字
+	"CREATED_BY_LNAME" VARCHAR2(150) not null,  	创建人的姓
+	"USER_ID" VARCHAR2(297) not null,             	用户Id 32位随机数
+	"MODIFIED_BY_FNAME" VARCHAR2(150),            	修改人的名字
+	"MODIFIED_BY_LNAME" VARCHAR2(150),            	修改人的姓
+	"INSTITUTE" VARCHAR2(150),                      	学院
+	"WHATS_NEXT" CLOB,                               
+	"CREATION_DATE" TIMESTAMP not null,           	创建时间
+	"MODIFICATION_DATE" TIMESTAMP,                 	修改时间
+	"SEQ_XML" CLOB,                                   
+
+2、表名：MELETE_SECTION（节）
+
+	"SECTION_ID" NUMBER(10) not null,    			节的ID （主键兼唯一索引）
+	"VERSION" NUMBER(10) not null,        			版本号
+	"MODULE_ID" NUMBER(10) not null,      		章的外键（MODULE_ID）
+	"TITLE" VARCHAR2(150) not null,        			节的标题
+	"CREATED_BY_FNAME" VARCHAR2(150) not null,  	创建人的名字
+	"CREATED_BY_LNAME" VARCHAR2(150) not null,  	创建人的姓
+	"MODIFIED_BY_FNAME" VARCHAR2(150),            	修改人的名字
+	"MODIFIED_BY_LNAME" VARCHAR2(150),            	修改人的姓
+	"INSTR" VARCHAR2(750),                           		内容描述
+	"CONTENT_TYPE" VARCHAR2(30) not null,         	内容类型
+	"AUDIO_CONTENT" NUMBER(1),                      	声音内容
+	"VIDEO_CONTENT" NUMBER(1),                     	 影像内容
+	"TEXTUAL_CONTENT" NUMBER(1),                    	文本内容
+	"DELETE_FLAG" NUMBER(1),                         	删除标记（0未删除）
+	"CREATION_DATE" TIMESTAMP not null,            	创建时间
+	"MODIFICATION_DATE" TIMESTAMP not null,       	修改时间
+	
+3、表名：MELETE_COURSE_MODULE (课程—章)
+
+	"MODULE_ID" NUMBER(10) not null,  	章的ID（章的外键）并且还是唯一索引
+	"COURSE_ID" VARCHAR2(297),         	课程ID
+	"SEQ_NO" NUMBER(10) not null,
+	"ARCHV_FLAG" NUMBER(1),
+	"DATE_ARCHIVED" TIMESTAMP,
+	"DELETE_FLAG" NUMBER(1),           	删除标记（0未删除 1已删除）
+
+4、其它信息 - JDBC访问参数
+
+	公司：jdbc:oracle:thin:@192.168.0.80:1521:orcl   testsakai/testsakai
+	知金：jdbc:oracle:thin:@192.168.0.1:1521:edu      edlt/edlt

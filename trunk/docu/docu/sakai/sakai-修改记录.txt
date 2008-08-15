@@ -1,0 +1,13 @@
+张明良 2008/2/25
+	1.	公告：时间修改上午下午=>资源文件
+	2.	作业：pints  max  分数 最大
+	3.	sakai_realm_sql
+	4.	calendar->主页->日历->选项
+	5.	课程资源：去掉 上传下载  英文 or a 
+	6.	讨论组：去掉 添加的菜单
+	7.	login   logout  
+	8.	mailtool
+	9.	banaver （portal）
+	10.	题库删除按钮  删除 确认
+	11.	page order   英文
+	12.	大纲=》列表结构=》上海英文

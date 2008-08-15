@@ -1,0 +1,484 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>7.两个学生参加考试</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">7.两个学生参加考试</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://192.168.0.89:8080/portal/site/322ffaab-7973-48f7-8066-fdced47ceda6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>EDLT VCLE : Site Unavailable : Site Unavailable</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>eid</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>pw</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>EDLT VCLE : Administration Workspace : Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[6]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>EDLT VCLE : Administration Workspace : Worksite Setup</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>Mainxadminx365</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=新的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doSite_type</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Add a course(s) and/or section(s) not listed above...</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>continueButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>continueButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>continueButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=exact:Still cannot find your course/section?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id-Subject:1</td>
+	<td>123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id-Course:1</td>
+	<td>456</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id-Section:1</td>
+	<td>123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>uniqname</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>addButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>continueButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Continue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doUpdate_site_access</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>addSite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[2]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>EDLT VCLE : 123_456_123_Summer2007 : 主页</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=退出系统</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Gateway : Welcome</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>eid</td>
+	<td>d</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>pw</td>
+	<td>d</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : My Workspace : Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//li[2]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : 主页</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[8]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : Tests & Quizzes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>selectIndexForm:selectTable:0:takeAssessment</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>takeAssessmentForm:_id83</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>takeAssessmentForm:_id35:0:_id89:0:deliverMultipleChoiceSingleCorrect:_id582:2:_id585</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>takeAssessmentForm:submitForm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submittedForm:_id28</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>selectIndexForm:selectTable:1:takeAssessment</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>takeAssessmentForm:_id83</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>takeAssessmentForm:_id35:0:_id89:0:deliverShortAnswer:_id738</td>
+	<td>become a leader</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>takeAssessmentForm:next</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>takeAssessmentForm:_id35:0:_id89:0:deliverMultipleChoiceSingleCorrect:_id582:2:_id585</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>takeAssessmentForm:next</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>takeAssessmentForm:_id35:0:_id89:0:deliverShortAnswer:_id738</td>
+	<td>the student</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>takeAssessmentForm:submitForm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>submittedForm:_id28</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/ul/li[1]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : 主页</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=退出系统</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Gateway : Welcome</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>eid</td>
+	<td>e</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>pw</td>
+	<td>e</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : My Workspace : Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//li[2]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : 主页</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[8]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : Tests & Quizzes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>selectIndexForm:selectTable:1:takeAssessment</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>takeAssessmentForm:_id83</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>takeAssessmentForm:_id35:0:_id89:0:deliverShortAnswer:_id738</td>
+	<td>become a teacher</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>takeAssessmentForm:next</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>takeAssessmentForm:_id35:0:_id89:0:deliverMultipleChoiceSingleCorrect:_id582:0:_id585</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>takeAssessmentForm:next</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>takeAssessmentForm:_id35:0:_id89:0:deliverShortAnswer:_id738</td>
+	<td>the student</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>takeAssessmentForm:submitForm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>submittedForm:_id28</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/ul/li[1]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : 主页</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=退出系统</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Gateway : Welcome</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>eid</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>pw</td>
+	<td>123456</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : My Workspace : Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Discussion 1 SMPL202 Summer 2007</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : 主页</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Tests & Quizzes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : Tests & Quizzes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>authorIndexForm:_id72:0:authorIndexToScore1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

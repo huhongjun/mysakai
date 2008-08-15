@@ -1,0 +1,57 @@
+1、deploying
+	dav
+
+、loading components:(ComponentsLoader)
+	000sakai-portal-service-pack
+	sakai-alias-pack
+	sakai-announcement-pack
+	......
+	sakai-web-pack
+
+3、init service
+	sakai.properties <- SpringcompMgr
+	BasicconfigurationService
+	Log4jconfigurationmanager
+	PortalServiceImpl
+		SAX Parser
+		Styleable Provider
+	ToolComponent
+	......
+	SkinnableCharonPortal
+		charon:/site
+		charon:/【下面是可用的url，如http://localhost:8080/portal/worksite】
+			site-reset
+			tool
+			tool-reset
+			page
+			worksite
+			worksite=reset
+			rss
+			pda
+			atom
+			opml
+			gallery
+			gallery-reset
+			nav_login
+			nav_login_gallery
+			/presence
+			help
+			relogin
+			login
+			xlogin
+			login_gallery
+			logout
+			logout_gallery
+			error=reported
+			error=report
+			styles
+			none
+			directtool
+
+4、deploying
+	access.war
+	......
+	web.war
+
+
+	

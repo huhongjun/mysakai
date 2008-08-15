@@ -1,0 +1,364 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>5-add-edit-delete-chatroom</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">5-add-edit-delete-chatroom</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://192.168.0.89:8080/portal/site/7f4bc9a1-67e8-488c-00fc-fb15bb8beb62/page/e28dd97d-644a-46c5-8061-218ad3e67ee8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : fy : Chat Room</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Options</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>_id1:addRoom</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>editRoomForm:title</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>editRoomForm:desc</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>editRoomForm:submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>Maina455e410x9b84x4fbcx8064xe7038ce94697</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>topForm:viewOptions</td>
+	<td>label=Date Only</td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>Control</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>mainForm:message</td>
+	<td>345345</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>mainForm:submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>mainForm:message</td>
+	<td>35235</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>mainForm:reset</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=许可权</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>accesschat.delete.any</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>accesschat.delete.own</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>accesschat.delete.channel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>accesschat.delete.any</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>accesschat.delete.own</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>accesschat.delete.channel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doSave</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=退出系统</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>eid</td>
+	<td>a</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>pw</td>
+	<td>a</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//li[2]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[8]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Change Room</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>_id1:back</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Change Room</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=退出系统</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>eid</td>
+	<td>fy</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>pw</td>
+	<td>123</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[3]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//li[8]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Change Room</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=许可权</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>accesschat.delete.own</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>accesschat.delete.any</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>accesschat.delete.channel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doSave</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=退出系统</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>eid</td>
+	<td>a</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>pw</td>
+	<td>a</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//li[2]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[8]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Change Room</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=退出系统</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>eid</td>
+	<td>fy</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>pw</td>
+	<td>123</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[3]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[8]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Change Room</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Set as Default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Set as Default</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=删除</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>_id3:delete</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>_id1:back</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Options</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

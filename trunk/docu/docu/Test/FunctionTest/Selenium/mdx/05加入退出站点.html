@@ -1,0 +1,99 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>加入退出站点</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">加入退出站点</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://192.168.0.89:8080/portal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>eid</td>
+	<td>mdx</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>pw</td>
+	<td>86125386</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : My Workspace : Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/ul/li[3]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : My Workspace : Membership</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>Main3e977b0dx8475x4878x002cx8c56409252e0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=可加入的网站</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=加入</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>Main3e977b0dx8475x4878x002cx8c56409252e0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=我的当前网站</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@href='http://192.168.0.89:8080/portal/tool/3e977b0d-8475-4878-002c-8c56409252e0?itemReference=7f4bc9a1-67e8-488c-00fc-fb15bb8beb62&panel=Main&sakai_action=doGoto_unjoinconfirm']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doGoto_unjoinyes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=退出系统</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Gateway : Welcome</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

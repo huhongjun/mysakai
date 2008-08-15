@@ -1,0 +1,244 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Realm</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Realm</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://localhost:8080/portal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Gateway : Welcome</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>eid</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>pw</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Administration Workspace : Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[5]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Administration Workspace : Realms</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>Mainxadminx355</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=下一页</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>Mainxadminx355</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=下一页</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=/site/just do it</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>provider</td>
+	<td>course</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=增加角色</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id</td>
+	<td>Research Assitant</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>lock4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>lock5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>lock6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>lock7</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>lock8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doDone_role</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=mdxxdm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>role2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doDone_user</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=赋予能力</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>eid</td>
+	<td>mdxxdm</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>role3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>eventSubmit_doDone_user</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Research Assitant</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=移除角色</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>Mainxadminx355</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=保存为</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id</td>
+	<td>/site/123456</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doSaveas</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>Mainxadminx355</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=下一页</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=/site/123456</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=移除领域</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doRemove_confirmed</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=/site/just do it</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=退出系统</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Gateway : Welcome</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

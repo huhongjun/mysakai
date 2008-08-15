@@ -1,0 +1,249 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>6-add-setup-delete-worksite-course</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">6-add-setup-delete-worksite-course</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://192.168.0.89:8080/portal/site/%7Efy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[7]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : My Workspace : Worksite Setup</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=新的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doSite_type</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Add a course(s) and/or section(s) not listed above...</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=exact:Still cannot find your course/section?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id-Subject:1</td>
+	<td>English</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id-Course:1</td>
+	<td>Computer</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id-Section:1</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>number</td>
+	<td>label=1 更多</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id-Subject:2</td>
+	<td>English</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id-Course:2</td>
+	<td>English</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id-Section:2</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>uniqname</td>
+	<td>fy</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>addButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>skin</td>
+	<td>label=pig</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>continueButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>sakai.assignment.grades</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>blogger</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>sakai.chat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>sakai.discussion</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>sakai.dropbox</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>sakai.mailbox</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>osp.evaluation</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>sakai.forums</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>osp.glossary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>sakai.rutgers.linktool</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>import_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>importSites</td>
+	<td>label=fy</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Continue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>toolSite21</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>toolSite31</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>toolSite51</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>toolSite61</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>toolSite101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>toolSite111</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doContinue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>emailId</td>
+	<td>english</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Continue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>joinable</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>joinerRole</td>
+	<td>label=Student</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doUpdate_site_access</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>addSite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>site2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=删除</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doSite_delete_confirmed</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

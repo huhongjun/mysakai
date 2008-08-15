@@ -1,0 +1,199 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>启动，新建，添加附件，查看事件</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">启动，新建，添加附件，查看事件</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://192.168.0.89:8080/portal/site/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : My Workspace : Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//li[2]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : test : 主页</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/ul/li[3]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : test : Schedule</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=新事件</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>activitytitle</td>
+	<td>meeting</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>day</td>
+	<td>label=10</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>startHour</td>
+	<td>label=10</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doEditfrequency</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>frequencySelect</td>
+	<td>label=每月</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>till</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>endMonth</td>
+	<td>label=12月</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doSavefrequency</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>eventType</td>
+	<td>label=跨学科的会议</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>location</td>
+	<td>EDLT总部</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doAttachments</td>
+	<td></td>
+</tr>
+<tr>
+	<td>typeAndWait</td>
+	<td>upload</td>
+	<td>D:\SakaiUpload\实习生研究项目工作计划.doc</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>attachButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doAdd</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>view</td>
+	<td>label=按年显示的日程表</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[@href='http://192.168.0.34:8080/portal/tool/fda7cb3b-9697-40e3-8030-2e043c310f35?day=10&month=8&year=2007&panel=Main&sakai_action=doDay']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=meeting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='退回到日程表']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>view</td>
+	<td>label=按月显示的日程表</td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>view</td>
+	<td>label=按周显示的日程表</td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>view</td>
+	<td>label=按天显示的日程表</td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>view</td>
+	<td>label=事件清单</td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>timeFilterOption</td>
+	<td>label=今年活动</td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>timeFilterOption</td>
+	<td>label=本月活动</td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>timeFilterOption</td>
+	<td>label=本周活动</td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[2]/ul/li[1]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Sakai Based Service : test : 主页</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

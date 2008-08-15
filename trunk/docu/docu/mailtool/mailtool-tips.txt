@@ -1,0 +1,7 @@
+James º§ªÓpop3°¢smtp
+
+π‹¿Ì£∫
+	telnet localhost 4555
+	root/root
+	adduser huhj huhj
+	adduser huhb huhb

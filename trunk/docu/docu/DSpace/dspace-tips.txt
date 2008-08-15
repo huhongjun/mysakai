@@ -1,0 +1,35 @@
+1、DSpace单点登录
+	在DSpace中可自注册，通过CAS的url查询用户信息，
+	对DSpace来说，如果没有email字段就会出错
+
+	存在问题：
+		cas.userinfo.url=https://huhj:8443/cas/user-info/get-user
+		cas.userinfo.secret=[specify_secret]
+		上面两个url无效，不能得到用户信息，导致注册信息不完整，主要是email。需手工增加。
+		？或者这两个url本来就是要自己写的。（从网页用正则表达式析取字段信息）
+	关掉自动注册后没有这个问题，但须手工用netid关联CAS和DSpace用户
+	
+2、DSpace的PostgresSQL远程登录需要如下配置
+
+	2.1 postgresql.conf
+		#---------------------------------------------------------------------------
+		# CONNECTIONS AND AUTHENTICATION
+		#---------------------------------------------------------------------------
+		
+		# - Connection Settings -
+		
+		listen_addresses = '*'			# what IP address(es) to listen on; 
+		
+	2.2 pg_hba.conf	(24b表示网段)
+		host    all         all         192.168.1.0/24        password
+		
+3、注册的类依次使用
+	#### --------------cas huhj started------------------------------------------------------------
+	# Stack of authentication methods
+	#  (See org.dspace.eperson.AuthenticationManager)
+	plugin.sequence.org.dspace.eperson.AuthenticationMethod = \
+	          org.dspace.eperson.CASAuthentication, \
+	          edu.ufp.dspace.UFPGroups
+	#org.dspace.eperson.LDAPAuthentication, \
+	#, \
+	#org.dspace.eperson.PasswordAuthentication		

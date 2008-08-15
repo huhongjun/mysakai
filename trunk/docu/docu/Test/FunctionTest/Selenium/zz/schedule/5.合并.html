@@ -1,0 +1,244 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>merge2</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">merge2</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://192.168.0.89:8080/portal/site/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : My Workspace : Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[7]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : My Workspace : Worksite Setup</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=新的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>project</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doSite_type</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>title</td>
+	<td>caledar</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>continueButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>sakai.announcements</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>sakai.assignment.grades</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>sakai.schedule</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>sakai.search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>sakai.sections</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>sakai.rwiki</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>osp.wizard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Continue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doUpdate_site_access</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>addSite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=caledar</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/ul/li[2]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : caledar : Schedule</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=新事件</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>activitytitle</td>
+	<td>calendar meeting</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>day</td>
+	<td>label=11</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>startHour</td>
+	<td>label=8</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>eventType</td>
+	<td>label=会议</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doAdd</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doAdd</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/ul/li[1]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Sakai Based Service : caledar : 主页</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Sakai Based Service : My Workspace : Worksite Setup</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>site2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=删除</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doSite_delete_confirmed</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/ul/li[1]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Sakai Based Service : My Workspace : Home</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

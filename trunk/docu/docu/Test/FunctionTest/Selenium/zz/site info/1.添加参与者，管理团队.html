@@ -1,0 +1,534 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>添加参与者，管理团队</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">添加参与者，管理团队</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://192.168.0.89:8080/portal/site/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : My Workspace : Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[2]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : 主页</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[19]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : Site Info</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/ul/li[1]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : 主页</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[17]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : Section Info</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>overviewForm:_idJsp12</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/ul/li[1]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : 主页</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[19]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : Site Info</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=添加参与者</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>noEmailInIdAccount</td>
+	<td>d<br />e<br />f<br />q<br />w<br />r<br />t</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>same_role_false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doContinue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>noEmailInIdAccount</td>
+	<td>d<br />e<br />q<br />w<br />r</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doContinue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>role1</td>
+	<td>label=Student</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>role2</td>
+	<td>label=Student</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>role3</td>
+	<td>label=Student</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>role4</td>
+	<td>label=Teaching Assistant</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>role5</td>
+	<td>label=Instructor</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>eventSubmit_doContinue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>notify_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doContinue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doAdd_participant</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[@href='http://192.168.0.89:8080/portal/tool-reset/3c17c48f-f397-44bd-80e3-56d4d3b0d984/?panel=Main']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[17]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : Section Info</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>overviewForm:_idJsp12</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>rosterForm:search</td>
+	<td>e</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>rosterForm:_idJsp30</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[19]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : Site Info</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=编辑班级名册</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=添加名册</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>selectTerm</td>
+	<td>label=Fall 2007</td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>selectTerm</td>
+	<td>label=Winter 2007</td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>selectTerm</td>
+	<td>label=Spring 2007</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Cancel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Manage Groups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=新的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>Title</td>
+	<td>sakai</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>Title</td>
+	<td>sakai team</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>Description</td>
+	<td>for the test</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>generallist</td>
+	<td>label=d (d)</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>document.groupForm.elements['Add to group &gt;']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>generallist</td>
+	<td>label=q (q)</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>document.groupForm.elements['Add to group &gt;']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>generallist</td>
+	<td>label=e (e)</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>document.groupForm.elements['Add to group &gt;']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>generallist</td>
+	<td>label=r (r)</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>document.groupForm.elements['Add to group &gt;']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Update</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>removeGroups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>removeGroups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Manage Groups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Revise</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>Description</td>
+	<td>for the test<br />there will be 4 members</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>Description</td>
+	<td>for the test<br />there will be 3 members</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>document.groupForm.elements['&lt; Remove']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Update</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[@href='http://192.168.0.89:8080/portal/tool-reset/3c17c48f-f397-44bd-80e3-56d4d3b0d984/?panel=Main']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Manage Groups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>removeGroups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>removeButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doGroup_remove_confirmed</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>remove_a1adbe91-f65d-41c6-0038-22126f61781b</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>remove_fae53b10-5438-47f6-80d9-6474f6830aa4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>remove_d8a320b8-700d-45b0-00da-6d2db96e9ffd</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>remove_6aa24c0a-17c2-496e-8087-ecde6f7bf91a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>remove_606f50d9-aa61-4468-000b-7c94312419c2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doUpdate_participant</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/ul/li[1]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : 主页</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

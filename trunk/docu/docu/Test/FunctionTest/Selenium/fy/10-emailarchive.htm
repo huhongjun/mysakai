@@ -1,0 +1,179 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>10-emailarchive</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">10-emailarchive</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://192.168.0.89:8080/portal/site/7f4bc9a1-67e8-488c-00fc-fb15bb8beb62/page/4b623946-370a-4d13-00ee-f6636104a39d</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : fy : 主页</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>5000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//li[10]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : fy : Email Archive</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=exact:fy:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=浏览页眉</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=删除</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doRemove_confirmed</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=exact:fy:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='下一封电子邮件 &gt;']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@value='&lt; 上一封电子邮件']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=隐藏页眉</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='返回目录']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=fy@localhost</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=7f4bc9a1-67e8-488c-00fc-fb15bb8beb62@localhost</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Options</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>open-true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doUpdate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Options</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>open-false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doUpdate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=权限</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doCancel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>search</td>
+	<td>a</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='搜索']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>search</td>
+	<td>yufu</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='搜索']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>search</td>
+	<td>yu fu</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='搜索']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='清除搜索']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//img[@alt='按接收日期排序 descending']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//img[@alt='按接收日期排序 ascending']</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>从站点设置中添加编辑删除站点参与者</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">从站点设置中添加编辑删除站点参与者</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://192.168.0.89:8080/portal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Gateway : Welcome</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>eid</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>pw</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : My Workspace : Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[6]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : My Workspace : Worksite Setup</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>Mainxadminx365</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>site9</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=修改</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=添加参与者</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>noEmailInIdAccount</td>
+	<td>test<br />fy</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>emailInIdAccount</td>
+	<td>mdxxdm@163.com</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>Mainxadminx365</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>same_role_true</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doContinue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>selectRole_access</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doContinue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doContinue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doAdd_participant</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>activeGrant41bc5aac-251a-4ee1-00d8-64e9079d4001</td>
+	<td>label=未激活的</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>role41bc5aac-251a-4ee1-00d8-64e9079d4001</td>
+	<td>label=maintain</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>remove_41bc5aac-251a-4ee1-00d8-64e9079d4001</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>remove_1fd238d1-e8a8-48a3-8036-cfed9b18dfa8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>remove_0c6de16c-1acf-416a-005f-070b955a2a41</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doUpdate_participant</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/ul/li[1]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : My Workspace : Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=退出系统</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Gateway : Welcome</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,187 @@
+1、MAVEN_OPTS='-Xms256m -Xmx512m -XX:PermSize=64m -XX:MaxPermSize=128m'
+
+2、Setup the SETENV file in the tomcat/bin directory with JAVA_OPTS (from Install Java 1.5)
+
+   1. Mac/Linux: Create a file called setenv.sh with the following:
+      export JAVA_OPTS="-server -XX:+UseParallelGC -Xmx768m -XX:MaxPermSize=160m 
+      -Djava.awt.headless=true"
+
+   2. Windows(PC): Create a file called setenv.bat with the following:
+      set JAVA_OPTS=-server -XX:+UseParallelGC -Xmx768m -XX:MaxPermSize=160m -
+      Djava.awt.headless=true   
+
+3、maven 执行之前设置语言、区域选项，命令行设置Java参量
+
+4、Tool ordering is optional.  
+	It is defined by entering some XML in a file called 
+	toolOrder.xml located in sakai.home.  The name of this file is a configured into 
+	the ServerConfigurationService, and this service is responsible for reading the 
+	tool ordering and making it available to the portal. Tool order is done 
+	dynamically at runtime, and is not currently used to change the order of pages 
+	stored in the Site.  If you change the ordering in the toolOrder.xml file, the 
+	change will be reflected at the next server restart for all sites of the 
+	appropriate type.
+
+5、开发人员使用的portal /mercury
+
+6、配置文件读取次序
+	.properties Files Locations Sakai reads a number of optional files from the 
+	Sakai classpath, the Sakai home directory, and the Sakai security directory to 
+	form the set of configuration values.  Files are read in a specific order; the 
+	files read in later override settings from files read earlier.  These files are, 
+	in order: -	(classpath, sourced in the kernel/component module) 
+	/org/sakaiproject/config/sakai.properties -	(file) sakai.home/sakai,properties -
+	(file) sakai.home/local.properties -	(file) sakai.security/security.properties
+
+	可以在local.properties中设置自己的参数
+
+	Registration is transient to each run of Sakai; it is done at server startup, 
+	stored in memory, and lost when the server shuts down.  There is no persistence 
+	(such as a database table) behind registration.  
+
+8、CMS 相关术语
+	Models course structures & memberships 
+ 	CourseSet:a college, school, dept, etc 
+ 	Academic Session:a semester, quarter, term, etc 
+ 	Canonical Course:a course definition 
+ 	Course Offering:a course offered in an academic session Course 
+ 	Section:a group of teachers and students that meets someplace 
+ 	Enrollment Set:a group of enrollments and instructors that shows up on transcripts
+
+9、sakai 开发设置
+		安装Maven 1.0.2；
+		设置maven参数：build.properties（放到UserHome目录(可通过Set命令查看)）
+		maven sakai	控制面板=》区域设置=》英语(美国)，否则测试出错
+		eclipse配置
+			手工将几个项目的tomcat包的版本号改为5.5.23
+			删去OSID 项目的MAVEN_REPO/nekohtml/jars/nekohtml-0.9.5.jar依赖
+			
+10、运行参数
+		maven内存参数：MAVEN_OPTS="-Xmx384m -XX:PermSize=48m"
+
+		maven如下配置：（.maven  或 maven运行的当前目录）
+			maven.repo.remote = http://cvs.sakaiproject.org/maven,http://www.ibiblio.org/maven
+			maven.tomcat.home = D:\\ADeveloper\\Tomcat-5.5.23\\
+		Sakai:
+			JAVA_OPTS="-server -Xms768m -Xmx768m -XX:PermSize=128m -XX:MaxPermSize=256m -XX:NewSize=192m -XX:MaxNewSize=384m"
+	
+11、本地化的问题
+	FCKeditor 用户语言：en-us（在中文IE中是中文，在英文FF中是英文，好像跟浏览器走）
+	邮件=》显示选择视图=》下拉列表：英文选项
+	首页日历选项：事件类型=》高、中优先级无（属正常的）；低优先级是英文？	
+12、未登录网页显示英文 （标题可在数据库里面修改，内容可在静态页面里修改）
+	Tomcat启动语言设置
+13、登陆后我的空间页面菜单栏和页面英文（可在数据库里面修改 ）
+
+14、进入测试站点点击资源库显示的网页英文（此页面为静态页面）
+
+15、点击测试右边功能项显示的为英文，页面上的下拉列表为英文（可在数据库里面修改）
+
+16、点击站点信息页面下显示为英文（可在数据库里面修改）
+	关于用户角色的面熟===》数据库
+17、点击网页最下面的Poweredby东方创远图片会弹出sakai网站（可在sakai.properties文件里面修改url）==》定向到东方创远网站
+
+18、网页最下面有sakai
+	需修改VM文件。
+
+19 点击站点信息再点击页面定制显示为英文=>提示信息：
+	Hint: Changes to page ordering will not take effect 
+	until you click 'Save'. Deleting, Adding or Editing a Page is saved immediately
+
+	提示：改变页面次序只会在保存后生效。删除、添加和编辑页面是立刻保存。
+
+20 #权限英文未修改 ===》暂不管
+21 未登陆用户名密码为英文
+	===》尝试：操作系统语言定义	
+	set JAVA_OPTS=%JAVA_OPTS% -Duser.language=es -Duser.region=ES
+
+22、去掉Help，两个地方===》sakai.properties===>
+	display.help.menu=
+	display.help.icon=
+
+23、sakai tool stealth
+
+	sakai.dropbox,sakai.search,sakai.messagecenter,sakai.sections,
+	sakai.metaobj,sakai.chat,sakai.mailbox,sakai.rutgers.linktool,sakai.news
+
+	投递箱  用于教员和学生之间的私人文件的共享 	sakai.dropbox
+	搜索  	用于搜索内容  					sakai.search
+	消息  	显示发到/来源某个站点用户的消息  	sakai.messagecenter
+	班组管理 用于管理课程站点的单元小组 		sakai.sections
+	聊天室  	用于文字形式的实时的交流  sakai.chat
+	表单  		表单工具 sakai.metaobj
+	邮件归档  	用于查看发送到站点的归档邮件  sakai.mailbox
+	链接工具  	链接到外部应用的工具 		sakai.rutgers.linktool
+	RSS新闻订阅  	用于查看在线RSS资源 	sakai.news
+	
+24、Which "My Workspace" belongs to which user?
+
+		Mysql v4.1.11 for Sakai v2.2.1:
+		
+		select s.TITLE, u.* 
+		from
+		  SAKAI_SITE s join
+		  SAKAI_USER_ID_MAP u on (s.CREATEDBY=u.USER_ID)
+		where SITE_ID like '~%' or IS_USER<>0;
+	  
+25、Building Sakai with Maven -- from subdirectories (or, one module or project at a time)
+		maven plugin:download -DartifactId=sakai -DgroupId=sakaiproject -Dversion=2.2 -Dmaven.repo.remote=http://source.sakaiproject.org/maven/
+
+		进入任意子目录(不必有maven的xml配置文件)，执行maven命令。
+		有时不行，只要重新执行该命令一次即可。
+26、
+	The default language locale must be defined at boot time (though this 
+	can be over-ridden by user preferences), by setting the tomcat 
+	JAVA_OPTS property as follows:
+	
+	-- catalina.sh -----------------------------------------------
+	## Define default language locale: Japanese / Japan
+	JAVA_OPTS="$JAVA_OPTS -Duser.language=ja -Duser.region=JP"
+	--------------------------------------------------------------
+	
+	-- catalina.bat ----------------------------------------------
+	rem Define default language locale: Japanese / Japan
+	set JAVA_OPTS=%JAVA_OPTS% -Duser.language=ja -Duser.region=JP
+	--------------------------------------------------------------
+	
+27、sakai 2.4.1 的更新文档
+	sakai-skin.doc
+	
+28、charon portal的入口url
+	/portal
+
+	/portal/site
+	/portal/site/<site id>
+	/portal/site/<site id>/page/<page id>
+	
+	/portal/gallery
+	/portal/gallery/<site id>
+	/portal/gallery/<site id>/page/<page id>
+	
+	/portal/worksite/<site id>	[只有站点]
+	/portal/worksite/<site id>/page/<page id>
+	
+	/portal/page/<page id>	【只有页面】
+	
+	/portal/tool/<tool placement id>
+	
+	/portal/page/sakai.resources?sakai.site=~csev
+	
+	/portal/presence/<site id>
+	
+29、web-tool
+    * Changed default page for the Web Content tool: 
+    File:       web-tool/tool/src/webapp/tools/sakai.iframe.xml 
+
+30、Added .classpath, .project to make webservies an Eclipse project
+	maven eclipse
+
+31、tomcat ajp windows版本只能用1.1.4（windows XP professional）
+32、Replace default icon in webapps/ROOT/favicon.ico
+	网上说仅对firefox有用
+33、How can i change the default role such as access or student?
+	You just need to change the sakai.createuser.xml inside the user
+	model, and specify the desired type instead of registered inside the
+	following line, and restart your tomcat.
+
+	<configuration name="create-type" value="registered" />

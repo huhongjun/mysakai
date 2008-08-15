@@ -1,0 +1,6 @@
+
+http://127.0.0.1:9000/login/login.jsp?logintype=zhj&eid=
+
+http://192.168.0.248:9000/login/login.jsp?logintype=zhj&eid=29725
+
+http://192.168.0.80:9080/sakai-login-tool/login.jsp?logintype=zhj1&eid=32656

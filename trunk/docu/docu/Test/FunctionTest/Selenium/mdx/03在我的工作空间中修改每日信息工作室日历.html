@@ -1,0 +1,444 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>在我的工作空间中修改每日信息工作室日历</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">在我的工作空间中修改每日信息工作室日历</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://192.168.0.89:8080/portal/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>eid</td>
+	<td>mdx</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>pw</td>
+	<td>86125386</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : My Workspace : Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>Main6c148f52xe10cx4153x00f5x3070bb3f2d02</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=选项</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>title</td>
+	<td>我的工作室</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>height</td>
+	<td>label=1200像素</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doConfigure_update</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>Main6c148f52xe10cx4153x00f5x3070bb3f2d02</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=选项</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>title</td>
+	<td>My Workspace Information</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>height</td>
+	<td>label=600像素（推荐）</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doConfigure_update</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>Mainb9edf201x5dddx4c6bx8021x410097f5a08f</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=选项</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>show-subject-subject</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>show-subject-body</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doUpdate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : My Workspace : Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>calendarForm:_idJsp3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>prefsForm:lowPriorityEvents</td>
+	<td>label=Academic Calendar</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>prefsForm:_idJsp28</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>prefsForm:lowPriorityEvents</td>
+	<td>label=Activity</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>prefsForm:_idJsp28</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>prefsForm:lowPriorityEvents</td>
+	<td>label=Deadline</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>prefsForm:_idJsp28</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>prefsForm:lowPriorityEvents</td>
+	<td>label=Class session</td>
+</tr>
+<tr>
+	<td>removeSelection</td>
+	<td>prefsForm:lowPriorityEvents</td>
+	<td>label=Class session</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>prefsForm:lowPriorityEvents</td>
+	<td>label=Special event</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>prefsForm:_idJsp28</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>prefsForm:lowPriorityEvents</td>
+	<td>label=Cancellation</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>prefsForm:_idJsp28</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>prefsForm:mediumPriorityEvents</td>
+	<td>label=Deadline</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>prefsForm:mediumPriorityEvents</td>
+	<td>label=Academic Calendar</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>prefsForm:_idJsp22</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>prefsForm:lowPriorityEvents</td>
+	<td>label=Web Assignment</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>prefsForm:_idJsp28</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>prefsForm:mediumPriorityEvents</td>
+	<td>label=Web Assignment</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>prefsForm:_idJsp22</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>prefsForm:lowPriorityEvents</td>
+	<td>label=Class section - Discussion</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>prefsForm:_idJsp28</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>prefsForm:mediumPriorityEvents</td>
+	<td>label=Class section - Discussion</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>prefsForm:_idJsp29</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>prefsForm:highPriorityColor_colorPickerPopup</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPopUp</td>
+	<td></td>
+	<td>30000</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>Xpath=id('prefsForm:highPriorityColor')</td>
+	<td>#FF3300</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>prefsForm:mediumPriorityColor_colorPickerPopup</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPopUp</td>
+	<td></td>
+	<td>30000</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>Xpath=id('prefsForm:mediumPriorityColor')</td>
+	<td>#FFFF33</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>prefsForm:lowPriorityColor_colorPickerPopup</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPopUp</td>
+	<td></td>
+	<td>30000</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>Xpath=id('prefsForm:lowPriorityColor')</td>
+	<td>#33FFFF</td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>Mainb434ef62x75f2x4475x009fx238da9c3a208</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>prefsForm:_idJsp40</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>calendarForm:_idJsp9</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>calendarForm:_idJsp11</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>calendarForm:_idJsp11</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>calendarForm:_idJsp9</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>calendarForm:_idJsp3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>prefsForm:highPriorityEvents</td>
+	<td>label=Academic Calendar</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>prefsForm:highPriorityEvents</td>
+	<td>label=Deadline</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>prefsForm:highPriorityEvents</td>
+	<td>label=Web Assignment</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>prefsForm:_idJsp23</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>prefsForm:mediumPriorityEvents</td>
+	<td>label=Activity</td>
+</tr>
+<tr>
+	<td>removeSelection</td>
+	<td>prefsForm:mediumPriorityEvents</td>
+	<td>label=Activity</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>prefsForm:mediumPriorityEvents</td>
+	<td>label=Cancellation</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>prefsForm:mediumPriorityEvents</td>
+	<td>label=Activity</td>
+</tr>
+<tr>
+	<td>removeSelection</td>
+	<td>prefsForm:mediumPriorityEvents</td>
+	<td>label=Cancellation</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>prefsForm:mediumPriorityEvents</td>
+	<td>label=Cancellation</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>prefsForm:mediumPriorityEvents</td>
+	<td>label=Special event</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>prefsForm:mediumPriorityEvents</td>
+	<td>label=Deadline</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>prefsForm:mediumPriorityEvents</td>
+	<td>label=Academic Calendar</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>prefsForm:mediumPriorityEvents</td>
+	<td>label=Web Assignment</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>prefsForm:_idJsp29</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>prefsForm:highPriorityColor</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>prefsForm:mediumPriorityColor</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>prefsForm:lowPriorityColor</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>prefsForm:_idJsp40</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=退出系统</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Gateway : Welcome</td>
+	<td></td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,117 @@
+#!/usr/bin/perl -w
+
+# (C) 2006 by Will Trillich <will-at-serensoft-dot-com>
+# demonstrates use of OSP.pm to create worksites (with pages & tools)
+# and users -- and assign the users to the worksites
+
+use strict;
+use OSP;
+
+my %course;	# assuming one course per fac
+my %fac;	# assuming one fac per course
+my %stu;	# assuming all students signing up for each course
+
+&get_data; # you'd get the data from your ERP of course
+
+# NOTE -- skins referred to are 'philosophy' and 'physics' so you can
+#	cp -a webapps/library/skin/examp-u webapps/library/skin/physics
+#	cp -a webapps/library/skin/gen-u webapps/library/skin/philosophy
+# or be prepared for ugly worksites!
+
+my $osp = OSP->new('localhost:8080', 1) # 1 = turn on debug output
+	->login('admin','BMOC-Password-Here')
+		or die "Can't connect/login to OSP server";
+
+foreach my $fac ( keys %fac ) {
+	my $course = $fac{$fac}{course};
+	$course    = $course{$course} or die "No such course '$course' for faculty '$fac'";
+
+	#####################################
+	# do it all, in one call:
+	my $result = $osp->course(
+		%$course,
+		facultage => { $fac=>$fac{$fac} },
+		studentia => \%stu,
+	);
+	#####################################
+
+	# now we could check $result{}..->result for 'success' if needed
+
+	print "processed course $fac{$fac}\n";
+}
+
+
+
+#######################################################
+
+
+
+# and here we plop together some sample data -- two courses, with a faculty
+# for each, and three students who will be in both of the classes:
+sub get_data {
+	# userid	fname	lname	email	passwd
+	%stu = map {
+		&parse_user_cols( split /\t/ )
+	} split /\n/, <<'STUDENTRY';
+frisco	Francisco	D'Anconia	frisco@copper.com	a-is-a
+ragnar	Ragnar	Danneskjold	pirate@sea.net	non-contradiction
+galt	John	Galt	motive@power.org	either-or
+STUDENTRY
+
+	# userid	fname	lname	email	passwd	course
+	%fac = map {
+		&parse_user_cols( split /\t/ )
+	} split /\n/, <<'FACULTY';
+hakston	Hugh	Akston	h@reason.net	diner	Phil101
+rstadler	Robert	Stadler	rs@ScienceInThePublicInterest.gov	projectX	Phys101
+FACULTY
+
+	# title, description, short, skin
+	%course = map {
+		my @c = split /\n/;
+		$c[0] => +{
+			title => $c[0],
+			descr => $c[1],
+			short => $c[2],
+			skin  => $c[3],
+		};
+	} split /\n\n/, <<'COURSE';
+Phil101
+Philosophy 101: The role of the mind in the life of moral man
+Phil 101: Man, Mind and More
+philosophy
+
+Phys101
+Physics 101: The physical universe -- how things work
+Phys 101: The universe
+physics
+COURSE
+
+	print
+		"Coursery:\n",
+		(map{"\t$_->{title} (skin='$_->{skin}')\n"} values %course),
+		"Faculty [passwords]:\n",
+		(map{"\t$_->{id} [$_->{passwd}] teaching $_->{course}\n"} values %fac),
+		"Studentry [passwords]:\n",
+		(map{"\t$_->{id} [$_->{passwd}]\n"} values %stu),
+		;
+}
+
+
+
+# turn array of [userid,fname,lname,email,passwd] into
+# hash of {userid=>{fname=>..,lname=>..,email=>..,passwd=>..}}
+sub parse_user_cols {
+	return $_[0] => +{
+		id     => $_[0],
+		fname  => $_[1],
+		lname  => $_[2],
+		email  => $_[3],
+		passwd => $_[4],
+		($_[5] ? (course=>$_[5]) : ()),
+	};
+}
+
+
+
+__PACKAGE__;

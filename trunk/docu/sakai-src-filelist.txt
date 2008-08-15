@@ -1,0 +1,358 @@
+﻿
+目的：
+	逐个查看、注释文件，主要说明其用途；
+日志：
+	2007/10/05	整理到component-impl
+
+==========================================================================
+access-impl		两个servlet
+access-tool		没有源码，只有一个*.vm文件=》acess.war
+	是一个弹出窗口，用于提示版权信息和使用注意。有三个按钮：我同意，我不同意，关闭窗口
+	web.xml配置：
+		org.sakaiproject.access.tool.AccessServlet
+		org.sakaiproject.vm.VelocityServlet
+		org.sakaiproject.util.RequestFilter
+access-web-tool		footer/header vm文件
+
+alias-api		
+alias-impl		
+alias-tool		vm,tools注册
+
+announcement-api
+	
+announcement-impl
+	impl/src/
+		java/
+			BaseAnnouncementService
+			DbAnnouncementService
+			SiteEmailNotificationAnnc
+		bundle/	本地化
+		sql/	ddl sql
+	pack/src/webapp/WEB-INF/
+		components.xml	Spring配置文件：可以注入各种服务；bean的名字都是API里的命名。
+	
+announcement-tool
+	tool/src/
+		java/.../
+			AnnouncementAction.java		action
+			AnnouncementActionState.java
+		webapp/
+			tools/
+				sakai.announcements.xml			公告工具注册文件
+				sakai.synoptic.announcement.xml	主页最新公告工具注册文件
+				?注册的工具名和实际的应用代码怎样关联？是通过Servlet名吗？
+				两个工具的VM是通一个文件，要区分工具ID、当前是否workspace
+			vm/announcement/
+				chef_announcements-customize.vm	
+				chef_announcements.vm			公告首页
+			WEB-INF/
+				web.xml		RequestFilter/ToolListener
+			velocity.properties
+archive-api
+archive-impl
+	impl/src/java/
+	impl2/src/java/
+	pack/src/webapp/WEB-INF/
+		components.xml
+archive-tool
+	tool/src/java/.../
+		ArchiveAction.java
+	tool/src/
+		bundle/
+		webapp/
+			tools/sakai.archive.xml
+			vm/archive
+				chef_archive_noacess.vm
+				chef_archive-batch.vm
+				chef_archive.vm
+			WEB-INF/web.xml
+			velocity.properties
+assignment-api
+assignment-impl		service
+assignment-tool		vm			
+
+authz-api
+authz-impl
+authz-tool
+
+cm-api
+	CM 服务有三个客户：GroupProvider, Roster tool, WS Setup/Site Info，客户不同要实现的接口多少有差别
+cm-impl
+	hibernate-impl
+		hibernate
+		impl
+			src
+				hibernate
+					hibernate.properties	用于maven schema
+				sql
+					
+			maven.xml
+				maven schema；maven load-data
+			project.properties
+			project.xml
+	说明：实现了联邦制多数据源
+component-api
+	src/java/org/sakaiproject/
+		component/api/
+		component/cover/
+		component/impl/
+			ContextLoader
+			SpringCompMgr
+				系统属性 sakai.component.closeonshutdown
+				init	
+					创建SakaiApplicationContext；
+					加载组件；
+					处理CLOSE_ON_SHUTDOWN；
+					获得sakai.home/sakai.security
+					从所有的属性文件中加载，最后的覆盖前面的(m_config)
+						org/sakaiproject/config/sakai.properties
+						sakai.home sakai.properties
+						sakai.home local.properties
+						securityPath security.properties
+					处理ServerId；
+					处理	PropertyOverrideConfigurer；
+					处理 PropertyPlaceholderConfigurer；
+					promotePropertiesToSystem 从配置值设置 系统属性；
+				getCatalina	使用系统属性 catalina.home
+				promotePropertiesToSystem
+					sakai.serverId
+					sakai.content.upload.max
+					sakai.content.upload.ceiling
+					sakai.content.upload.dir
+					sakai.force.url.secure				
+		util/
+			ComponentMap
+			ComponentsLoader
+				组件加载，系统参数sakai.demo=true时也加载components-demo.xml
+			ContextLoaderListener	Sakai's extension to the Spring ContextLoaderListener
+				Spring扩展，增减组件管理器的计数
+			PropertyOverrideConfigurer
+				Spring扩展，支持bodyContent@...形式的配置参数覆盖
+	src/java/org/springframework.context.support
+		SakaiApplicationContext	Spring扩展：记录失败的详细日志
+	api/src/java/
+		api/
+			ServerConfigurationService	接口定义
+		cover/
+			ServerConfigurationService	Facade模式
+	src/config/org/sakaiproject/config
+		sakai.properties	默认配置
+		toolOrder.xml		有两种站点类型，course和project，如何新增类型，建站时从哪儿读的数据
+component-impl
+	impl/src/java
+		BasicConfigurationService
+			init	
+				1、先从组件管理器获得本组件的所有配置参数
+				2、getServerId()
+				3、加载toolOrder.xml,先从sakai.home,再从默认位置org/sakaiproject/config/toolOrder.xml
+			getUserHomeUrl
+				配置参数userHomeUrl？==》默认我的空间：m_properties.get("portalPath") + "/site/~#UID#"
+			bean配置指定toolOrder.xml
+
+courier-api
+	sakai服务：推消息到浏览器端，常用于portal实例中工具刷新。
+courier-impl
+	BasicCourierService：客户端地址，排队
+	实现机制？
+courier-tool
+courier-util
+
+dav
+	user,group,group-user
+	public,private,attachment
+db-api
+db-impl
+	/db-impl/pack/src/webapp/WEB-INF/
+		components.xml	
+			SqlService配置
+			hibernate sessionFactory配置
+			BaseDataSource是jdbc:hsqldb:mem:sakai
+	/db-impl/
+		BasicSqlService
+	/ext
+		SakaiBasicDataSource
+		Spring扩展
+db-util
+discussion-api
+	
+discussion-impl
+	
+discussion-tool
+	一个使用了vm的老工具
+gradebook
+	文档、内容较多，有些有价值的配置参数
+help
+	components.xml	使用hsqldb:mem（运行时连上看看）
+	Help工具可有多个配置(基于组织的需求)
+	OOTB帮助
+		将helop子目录下的所有文档发布到shared/lib=》？
+		首次访问时：
+			找到所有tool，替换.为-；搜索tool_id/help.xml；执行全文索引和注册help.xml中的文档；
+	外部的help web app
+jsf
+	InputRichTextRenderer	用到wysiwyg.editor参数和FCKeditor，语言用的是Java虚拟机默认语言
+login-authn-tool
+	Web应用：8080/authn=》处理登录登出流程=》转工具：sakai.login
+	AuthnPortal is a public login/logout only Sakai portal - it provides a simple URL to login or logout and go somewhere if successful.
+	
+mailarchive-james		
+	config.xml
+		james 2.1.3
+		<repository destinationURL="file://var/mail/inboxes/" type="MAIL"/>
+		可以抽取外部的pop3邮箱
+	源码3个类
+		JamesServlet
+			startJames
+				参数：
+					servlet(web.xml)=>PHOENIX_HOME:pointing to the webapps root if not configured
+					ServerConfigurationService: smtp.dns.1;smtp.dns.2;smtp.port;smtp.enabled
+			/apps/james/SAR-INF/下的几个配置文件按用到sakai.home
+		SakaiMailet watches incoming mail (via James) and sends mail to the appropriate mail archive channel in Sakai.
+		
+master 用于定义核心开发框架应用包，如spring、hibernate
+	jsf-sun-tool.xml	include文件？maven 1.0文件，扩展project.xml
+	project.xml	定义sakai项目
+	pom.xml		maven 2 项目定义
+	project.properties
+		sakai.version
+		sakai.plugin.version
+		spring framework
+		commons-lang
+		commons-fileupload
+		tomcat.version
+		
+		hibernate
+		pluto
+		ehcache
+metaobj
+	和OSP有关，主要是Form
+	很多没翻译
+portal-charon
+	纯web静态
+portal-impl
+	SkinnableCharonPortal
+	
+portal-render-engine-impl
+	bundle/defaultskin
+		options.config	是否包含某块,同时还得删除macros.vm中的相应内容，否则显示java变量名。
+	webapp
+		vm/defaultskin(门户页面布局)
+			macros	各页面块的定义
+reference
+	library	web应用，但不是工具，只为提供静态资源。
+		src/webapp
+			calendar	日历
+			content		静态HTML
+			editor
+				CrossBrowserRichtextEditor
+				FCKEditor
+				HTMLArea
+			htmlarea 重复？
+			icon	
+				收藏夹或地址栏图标favicon.ico
+				skin icon
+			image
+				sakai
+				silk
+			
+			js	通用js脚本
+				headscripts.js
+					function openWindow(url, title, options)
+					function sitehelp(whereto)
+					function hideElement(hideMe)
+					function showSubmitMessage() 现在注释掉了
+					function myEscape(value)
+					function encodeURIComponentEmulated(s)
+					function utf8(wide)
+					function toHex(n)
+					function buildQueryString(theFormName)
+					function updCourier(dd, ic)
+					function formSubmitOnEnter(field, event)
+					function clickOnEnter(event, element)
+					function setMainFrameHeight(id)
+					function findPosition(obj)
+					function findScroll()
+					function firstFocus()
+					courier XMLHTTP 实现在此
+			jscalendar/	另一个日历？
+			resource-search/	TwinPeaks common scripts
+			schedule	日历导入格式模板
+			skin/
+			WEB-INF/
+SAM
+	project.properties
+		初始配置=》编译参数JDK1.4
+	/conf
+		Windows下运行时，这个目录需要放到C:
+	/docs	
+schedule
+	用数据库管理任务和触发器；
+	
+search-impl
+	stopwords.txt	什么用途？
+
+site-page-order-helper
+	基于RSF开发；
+	
+site-tool	说明：站点管理
+	tool/src/webapp
+		tools
+		vm/adminsites
+			chef_sites_list
+test-harness
+	支持集成测试的类：初始化全部组件；
+	cm-impl的集成测试要在cm-impl目录下执行： maven -Dmaven.test.skip=false itest
+tool
+	tool-impl
+		impl/src/bundle
+			tools.properties gongju
+	tool-util
+		RequestFilter 所有sakai工具的过滤器，负责在浏览器的cookie中保存session id
+			cookie名：JSESSIONID
+			功能：文件上传(相关参数)、字符解码、redirect
+user
+	sakai_preference	preference_id就是用户id，相应属性存放在字段中，以xml格式。
+	tool
+		sakai.createuser.xml Gateway的新帐号工具，可指定默认类型（用户不能更改，管理员在维护界面可以）。能否使用中文类型？
+		sakai.singleuser	 查看和修改帐号=》工具注册id和页面如何绑定？=》和servlet名匹配
+		sakai.users.xml		 管理员用户编辑器
+	user-tool-admin-prefs
+		管理员修改用户个性化参数
+	user-tool-prefs
+		用户修改自己的个性化参数
+	user-util
+		BasicAuth是在Filter中实现的，需要在sakai.properties中配置
+usermembership
+	管理员查看用户所属站点和组。可单独deploy而无需重启Sakai。
+util-util
+	jar
+velocity
+	
+web-api
+	是web-impl的接口定义
+web-impl
+	？
+webservice
+	axis
+	查看wsdl：http://pastoral:8080/sakai-axis/SakaiLogin.jws?wsdl
+	python测试脚本
+web-tool(VM)	
+		=》tools: iframe.myworkspace,iframe.service,iframe.site,iframe
+		=》属性文件：iframe.properties
+	tool/src/java/.../
+		IFrameAction.java
+			site - 显示服务(server.info.url配置)
+			workspace - 显示配置（myworkspace.info.url）
+			worksite - to show the current site's "getInfoUrlFull()" setting
+	tool/src/bundle/
+		iframe.properties
+	tool/src/webapp/
+		tools/
+		vm/web/
+			chef_iframe-customize.vm	iframe的options界面
+			chef_iframe-site-customize.vm	？
+			chef_ifram.vm	一个div，含iframe：工作站点信息portlet/
+		WEB-INF/
+		velocity.properties 运行时日志、输入输出编码(utf8)、TemplateLoader
+
+			
