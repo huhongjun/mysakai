@@ -1,0 +1,16 @@
+﻿eclipse europa
+	
+
+Spring IDE:
+	spring 配置文件中可以用Ctrl+mouse进行文件跳转
+
+
+eclipse plugin
+	
+	Properties editor	propedit.sourceforge.jp/index_en.html
+	ResourceBundle Editor	http://sourceforge.net/projects/eclipse-rbe/
+	sqlExplorer		http://eclipsesql.sourceforge.net/
+other
+	Properties editor 可独立运行
+	JRC Editor		http://www.zaval.org/products/jrc-editor/download/index.html
+	

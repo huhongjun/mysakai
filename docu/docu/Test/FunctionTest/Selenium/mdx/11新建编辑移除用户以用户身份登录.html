@@ -1,0 +1,239 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>新建编辑移除用户以用户身份登录</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">新建编辑移除用户以用户身份登录</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://localhost:8080/portal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Gateway : Welcome</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>eid</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>pw</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Administration Workspace : Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/ul/li[2]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Administration Workspace : Users</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>Mainxadminx210</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=新用户</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>eid</td>
+	<td>12345</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doSave</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>search</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=搜索</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>Mainxadminx210</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>first-name</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>last-name</td>
+	<td>11</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doSave</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>myiframe</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>Mainxadminx210</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>移除用户</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=移除用户</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doRemove_confirmed</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=取消搜索</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//li[14]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Administration Workspace : User Membership</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>Mainxadminx1210</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>userlistForm:searchButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>userlistForm:selectType</td>
+	<td>label=Registered</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>userlistForm:selectAuthority</td>
+	<td>label=Internal</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>userlistForm:searchButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>userlistForm:selectType</td>
+	<td>label=registered</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>userlistForm:searchButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>userlistForm:selectAuthority</td>
+	<td>label=External</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>userlistForm:searchButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>userlistForm:clearSearchButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[13]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Administration Workspace : Become User</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>Mainxadminx1110</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>su:username</td>
+	<td>mdxxdm</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>su:become</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=退出系统</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Gateway : Welcome</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

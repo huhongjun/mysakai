@@ -1,0 +1,209 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>4.创建题库</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">4.创建题库</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://localhost:8080/portal/site/ca95271f-28de-44e9-805d-2dd15e05d688/page/bf2f64fb-bd1c-42b8-003c-b9c2f2c58617</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : 主页</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//li[8]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : Tests & Quizzes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Question Pools</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>questionpool:add</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>questionpool:namefield</td>
+	<td>test pool</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>questionpool:submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>questionpool:TreeTable:0:poolnametext</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>editform:add</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>questionpool:namefield</td>
+	<td>listening</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>questionpool:submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>editform:add</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>questionpool:namefield</td>
+	<td>reading</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>questionpool:submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>editform:TreeTable:0:poolnametext</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>editform:addq</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>_id1:selType</td>
+	<td>label=简短答案/论文</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>_id1:_id10</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>itemForm:answerptr</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>itemForm:_id61_textinput</td>
+	<td>what is your plan?</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>itemForm:_id123_textinput</td>
+	<td>become a leader</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>itemForm:_id136</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Question Pools</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>questionpool:TreeTable:0:spacer_for_mozilla</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>questionpool:TreeTable:2:poolnametext</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>editform:addq</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>_id1:selType</td>
+	<td>label=简短答案/论文</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>_id1:_id10</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>itemForm:answerptr</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>itemForm:_id61_textinput</td>
+	<td>what is the passage mainly about?</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>itemForm:_id123_textinput</td>
+	<td>the student</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>itemForm:_id136</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[@href='http://localhost:8080/portal/tool-reset/300aa978-6914-46ad-8065-0833d5a3b365/?panel=Main']</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

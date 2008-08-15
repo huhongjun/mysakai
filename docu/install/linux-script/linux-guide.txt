@@ -1,0 +1,31 @@
+http://www.chinaitpower.com/2006Aug/2006-08-25/212801.html
+http://www.ibm.com/developerworks/cn/aix/library/es-unix-sysadmin1.html
+
+ps 的标准输出也只列出了您所运行的进程
+
+-a 命令行选项列出了包括您自己在内的所有用户的进程。然而，这个列表并不会包括那些没有控制终端的进程（比如那些在启动时开始执行的进程、守护进程以及那些作为 cron 工作的一部分的进程）。
+
+要获取所有正在运行的进程的列表，必须使用 -A 命令行选项
+
+-a 显示拥有控制终端的进程
+-x 显示没有控制终端的进程。
+
+显示所有正在运行的进程（不论它是否拥有控制终端）的命令行选项是 -e 。它和 BSD 的 -A 选项是等价的。
+
+ps -ef 来获取关于列出进程的更详细的信息
+对于 BSD 环境，通常添加 -l 选项，它为每个进程产生“长”输出
+
+ps -ef|grep bash
+-U 命令行选项限定了进程列表只显示指定用户名的进程。例如，要显示当前属于 root 用户的进程(ps -U root
+)
+
+要获取指定终端的所有进程，使用 -t
+ps -ef|grep processname|grep -v grep 
+ps -ef|grep tomcat|grep -v grep 
+
+nohup startWeblogic.sh& 
+tail -f nohup.out
+jobs 查看后台作业的状态
+fg 将不同序号的后台作业切换到前台上运行
+
+原程序的的标准输出被自动改向到当前目录下的nohup.out文件，起到了log的作用。但是有时候在这一步会有问题，当把终端关闭后，进程会自动被关闭，察看nohup.out可以看到在关闭终端瞬间服务自动关闭。咨询红旗Linux工程师后，他也不得其解，在我的终端上执行后，他启动的进程竟然在关闭终端后依然运行。在第二遍给我演示时，我才发现我和他操作终端时的一个细节不同：他是在当shell中提示了nohup成功后还需要按终端上键盘任意键退回到shell输入命令窗口，然后通过在shell中输入exit来退出终端；而我是每次在nohup执行成功后直接点关闭程序按钮关闭终端.。所以这时候会断掉该命令所对应的session，导致nohup对应的进程被通知需要一起shutdown。

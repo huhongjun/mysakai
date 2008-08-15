@@ -1,0 +1,127 @@
+Portal 页面 sumbit eid、pw 参数
+
+org.sakaiproject.login.tool.LoginTool类 
+（LoginTool extends HttpServlet）
+
+LoginTool类的
+doPost(HttpServletRequest req, HttpServletResponse res){
+
+    String eid = req.getParameter("eid").trim();
+    String pw = req.getParameter("pw").trim();
+
+    Evidence e = new IdPwEvidence(eid, pw);
+
+   Authentication a = AuthenticationManager.authenticate(e);
+
+}
+
+
+org.sakaiproject.user.cover.Authentication 类
+
+public static org.sakaiproject.user.api.Authentication authenticate(org.sakaiproject.user.api.Evidence param0)
+			throws org.sakaiproject.user.api.AuthenticationException
+	{
+		org.sakaiproject.user.api.AuthenticationManager manager = getInstance();
+		if (manager == null) return null;
+
+		return manager.authenticate(param0);
+	}
+	
+	org.sakaiproject.user.api.Authentication 接口
+	
+	org.sakaiproject.user.impl.UserAuthnComponent 类
+	
+	public Authentication authenticate(Evidence e) throws AuthenticationException
+	{
+	   User user = userDirectoryService().authenticate(evidence.getIdentifier(), evidence.getPassword());
+	
+	
+	}
+	
+	org.sakaiproject.user.api interface UserDirectoryService 
+	/*通过注入 org.sakaiproject.user.impl.DbUserService
+	而 class DbUserService extends BaseUserDirectoryService 类*/
+	BaseUserDirectoryService 类
+	
+	public User authenticate(String eid, String password)
+	{
+	User getUserByEid(String eid){
+	
+	}
+	
+	}
+	
+	User getUserByEid(String eid){
+	
+	 String id = getUserId(eid);
+
+		rv = getUser(id);
+	
+	}
+	
+	String getUserId(String eid){
+	String id = m_storage.checkMapForId(eid);
+	
+	}
+	
+	public User getUser(String id)
+	{
+	
+	user = m_storage.getById(id);
+	
+	}
+	
+	class DbUserService 类
+	class DbStorage extends BaseDbFlatStorage implements Storage
+	引入
+	
+	String checkMapForId(String eid)
+	{
+	String statement = "select USER_ID from SAKAI_USER_ID_MAP where EID=?";
+	
+	}
+	
+	public UserEdit getById(String id)
+		{
+			UserEdit rv = (UserEdit) super.getResource(id);
+
+			return rv;
+		}
+		
+		
+		DbStorage类初始化查询参数
+		
+		public DbStorage(StorageUser user)
+		{
+			super(m_tableName, m_idFieldName, m_fieldNames, m_propTableName, m_useExternalLocks, null, sqlService());
+			setSortField(m_sortField1, m_sortField2);
+
+			m_reader = this;
+		}
+		
+		BaseDbFlatStorage 类
+		
+		public Entity getResource(String id)
+	{
+		return getResource(null, id);
+	}
+	
+	Entity getResource(Connection conn, String id)
+	{
+	String sql = "select " + fieldList(m_resourceTableReadFields, null) + " from " + m_resourceTableName + " where ( "
+				+ m_resourceTableIdField + " = ? )";
+				
+				
+	List rv = m_sql.dbRead(conn, sql, fields, m_reader);
+	
+	
+	
+	}
+	
+	BasicSqlService类
+	
+	public List dbRead(Connection callerConn, String sql, Object[] fields, SqlReader reader)
+	{
+	
+	
+	}

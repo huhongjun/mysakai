@@ -1,0 +1,329 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>增加，删除领域</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">增加，删除领域</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://192.168.0.89:8080/portal/site/58793ca5-fcd2-480e-005c-97d301e51d30</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : test : 主页</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/ul/li[3]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : test : Schedule</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=新事件</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>activitytitle</td>
+	<td>meeting</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>day</td>
+	<td>label=11</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>startHour</td>
+	<td>label=9</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>eventType</td>
+	<td>label=会议</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doAdd</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>view</td>
+	<td>label=事件清单</td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>timeFilterOption</td>
+	<td>label=今日活动</td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>timeFilterOption</td>
+	<td>label=所有活动（默认）</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=meeting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=文件属性区</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>textfield</td>
+	<td>负责人</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doAddfield</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doUpdate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>view</td>
+	<td>label=事件清单</td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>timeFilterOption</td>
+	<td>label=所有活动（默认）</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=meeting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doRevise</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>负责人</td>
+	<td>甲</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doUpdate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=meeting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=新事件</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>activitytitle</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>month</td>
+	<td>label=9月</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>startHour</td>
+	<td>label=10</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>duHour</td>
+	<td>label=2</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>eventType</td>
+	<td>label=测验</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>负责人</td>
+	<td>教师</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doAdd</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>view</td>
+	<td>label=事件清单</td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>timeFilterOption</td>
+	<td>label=所有活动（默认）</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=test</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doDelete</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doConfirm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=meeting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doDelete</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doConfirm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=文件属性区</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>addedFields1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doUpdate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doUpdate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/ul/li[1]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Sakai Based Service : test : 主页</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

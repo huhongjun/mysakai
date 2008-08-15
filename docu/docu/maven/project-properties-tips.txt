@@ -1,0 +1,10 @@
+${basedir}
+${maven.src.dir}/
+${dbtarget}
+${maven.build.dir}
+${maven.hibernate.output.dir}/${maven.final.name}-schema.sql
+maven.hibernate.input.dir=${maven.build.dest}
+maven.hibernate.input.includes=**/*.hbm.xml
+maven.hibernate.input.excludes=
+maven.hibernate.aggregate.output.file=${maven.hibernate.output.dir}/aggregated-mappings.hbm.xml
+

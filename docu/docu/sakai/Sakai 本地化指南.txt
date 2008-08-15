@@ -1,0 +1,147 @@
+本地化需求实现的三种方式：
+	1、配置
+		sakai.properties
+		后台权限管理
+		模块是否显示可与权限挂钩，在工具的xml注册文件中设置
+	2、管理员定制
+		站点定制设计
+		
+	3、开发
+		增加Provider
+		修改已有代码
+		新工具集成
+		自己开发新工具
+	4、增减站点类型	sakai.sitesetup.xml
+	5、外部集成
+		DSpace
+		CAS
+		
+1、抽出源码基准作为演示和开发、实施的基础
+	源码中排除的内容
+		wiki（10.11: 还是加入，作为在线笔记）
+		blog
+		podcast
+		OSP（有研究价值）
+		polls
+	另加工具
+		Melete(10.11: 功能太多，可用Goal management)
+		SiteStat（据说对性能影响很大）
+	
+2、以上面的基准做演示、实施网站
+	安装预备条件
+		JDK 1.5.0
+		mysql	4.1
+		Tomcat 5.5.23
+		
+	本地化(精心整理出所有的文件，没有多余目录)
+		I18N资源文件(sakai_2-4-0_20070916)	[工具名：tool/tool-impl/src/bundle]
+
+		数据库脚本(安装成功后新建站点前执行)
+			db-init.sql
+			db-locale.sql
+				站点(页面->工具)：
+					！admin			系统管理员:系统管理
+					~admin			系统管理员:我的空间
+					！error			
+					!gateway		
+					!urlError		
+					!user				模板：我的空间
+					!worksite		模板：课程或项目站点
+					mercury
+				其它：
+					sakai_realm_role_desc
+					sam_type_t
+					sam_functiondata_t
+					sakai_user
+				
+		在线编辑器HTMLArea/FCKeditor（和浏览器的语言设置有关）
+		登录页的中英文选择（Tomcat启动时的默认locale设置，在start_sakai.bat中）
+		页脚sakai、server（修改源码=》vm文件）
+		
+		
+	用户特殊需求tool-order.xml
+		1、sakai.properties
+			站点不能自由加入：		sakai.properties
+			学生不能退出：			sakai.properties
+			老师不能踢出学生：		sakai.properties
+			不需要项目站点类别		?
+			站点搜索中只显示课程站点：sitesearch.noshow.sitetype=portfolioAdmin
+			去掉帮助（两个地方）	sakai.properties
+			使语言不可修改			sakai.properties(使只有中文选项)
+			课程大纲=》不让公开		?
+
+		2、站点设计
+			定制HTML文件(使用资源库上载、存储相应文件)
+				server.info.url					=/content/public/server_info_zjjy.html
+				myworkspace.info.url			=/content/public/myworkspace_info_zh_CN.html
+				webcontent.instructions.url		=/content/public/webcontent_instructions_zh_CN.html
+				webdav.instructions.url			=/content/public/webdav_instructions_zh_CN.html			
+				
+			Gateway栏目设计 - 欢迎/功能简介/课程搜索/新用户注册/使用指南
+				a)系统管理员手工修改：删除页面、新增页面，修改sakai.properties设置=》指向资源库公共资源,可热修改;
+				b)数据库脚本：db-customize-gateway.sql
+				c)不让自注册用户：设计Gateway站点，删除用户注册页面
+				
+		3、Realm - 系统管理员定制模板
+			定制站点模板
+				新建用户的我的空间=》模板是哪个？
+						
+				新建课程站点=》！site.template.course
+						教师不能修改参与者的角色?
+						*题库管理成为工具之一，因为作业和测验都用到
+						教师权限收缩=》站点信息的大部分功能去掉
+						助教管理单列
+						增加帮助中心站点
+					
+			定制用户模板：新建用户=》！user.template.registered
+				去掉一般用户新建站点权限
+				
+		4、tool-order.xml
+			定制【编辑工具】中出现的工具的次序;
+			生成课程站点有默认的符合预期的次序：tool-order.xml?
+					
+	个性配置
+		新建皮肤zjjy=》参考gen-u（/library/skin/zjjy）
+		css调整，如中文字体支持等
+	应用集成
+		providers
+
+		
+3、测试流程（整理后体现为数据库脚本的形式，可能有些类似附件的东西做不到，会在文件系统中）===》SQL=》王
+		用户：教师、学生、课程
+		网校、专业、课程(实际的)=》王
+		课程站点：两门以上，要有实际内容，在多种工具中有内容
+			大纲
+			公告
+			论坛：按需求清单建版块
+			作业：有各种状态的作业
+			测验：
+				题库：有各种类型的题目
+				有各种状态的测验
+			成绩册：
+				几个学生的成绩
+			分组的应用
+			
+	Test
+		测试大纲：TD导出
+		功能测试: Selenium测试脚本
+		性能测试: 采用Sakai源码自带的Jmeter测试脚本
+		
+4、定制开发
+	3.1 开发环境
+		CVS
+	3.2 开发任务
+		接口：
+			用户、课程、角色组								jingbc
+			邮件服务器
+		新工具：
+			在线笔记										pizhy、wangrq
+			课程章节设置
+		修改：
+			测验系统=》题目属性更多、增加组卷策略/单选多选分开为两类题目	new
+			页脚定制，修改源代码
+			
+备忘：
+	如何去掉、新增字段；
+	每一项权限定义的具体含义；
+	profile太多字段

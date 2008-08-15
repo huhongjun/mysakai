@@ -1,0 +1,49 @@
+Host：	Windows XP Professional
+Guest：	Ubuntu 7.10 Server(下载虚拟机)
+
+	XAMPP 1.6.4
+	FileZilla Client
+	VMWare 6.0.2
+	NetTerm 5.2
+	
+1、安装vmware
+	
+2、装载虚拟机
+	linux内核替换
+		linux-generic
+	安装vmware tools
+		光盘可能需手工加载
+	安装vsftp服务器
+		
+	安装xampp(要求安装在/opt目录下)
+		nobody/lampp,需修改linux 用户的目录权限
+3、ubuntu 开发环境
+	增加一个硬盘（分系统硬盘和开发硬盘）
+		挂载/opt
+		挂在/adeveloper
+	新建用户
+		sakai，home目录在/opt/home/sakai
+	安装jdk5（手工更好）
+		apt-get install sun-java6-jdk			  //安装JDK
+		update-alternatives --config java		//设置当前默认的java解释器
+
+	手工安装maven
+		filezilla 上传maven1.0.2 tar包（7zip）
+		设置环境变量 MAVEN_HOME、JAVA_HOME
+		【 编辑/etc/profile文件，添加，重登录自动生效   
+				1. JAVA_HOME=/usr/lib/jvm/java-6-sun  
+   			2. export JAVA_HOME  】
+	手工安装tomcat
+		apt-cache search tomcat 						//查询可用的Tomcat 
+		安装tomcat5.5	apt-get install tomcat5.5 
+4、编译、发布
+		sakai源码
+5、使用
+
+
+命令列表：
+	ln -fs /usr/bin/rar /usr/bin/unrar
+	
+方便的工具：
+	mc 文本菜单工具，支持目录浏览
+	aptitude 支持软件包安装、卸载的文本菜单工具

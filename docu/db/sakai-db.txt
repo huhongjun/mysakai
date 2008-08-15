@@ -1,0 +1,39 @@
+待办：
+	整个数据库的备份与加载
+
+已办：
+	sakai-db-locale.sql
+		可以通过数据库实现的本地化
+	sakai-db-melete-patch
+		有一个表不能自动建；
+	sakai-db-customGateway.sql
+		Gateway本地化，如页面增减、工具设置和页面选择等。
+	sakai-db-cm.sql:				
+		加入学期信息；
+		课程、注册学生信息；
+
+数据库初始化：
+	1、支持三种数据库，分两种持久化方式
+		sqlService和hibernate
+		
+	2、初始化任务
+		authz\authz-impl\impl\src\sql\mysql\sakai_realm_zh_CN.sql
+			表：		sakai_realm_role_desc
+			数据：	初始化权限管理模板和用户角色
+		sam\samigo-pack\src\sql\mysql\sakai_samigo_zh_CN.sql
+			表：sam_type_t/sam_functiondata_t
+			数据：题目类型和功能项
+		site\site-impl\impl\src\sql\mysql\sakai_site_zh_CN.sql
+			表：		站点表、站点属性表和站点工具表
+			数据：	预建站点!admin/!error/!gateway/!urlerror/!user/!worksite/!mercury/~admin
+					（？各站点的用途？）
+		user\user-impl\impl\src\sql\mysql\sakai_user_zh_CN.sql
+			sakai_user/sakai_user_id_map 建初始账号admin和postmaster，并设定eid和user_id的映射。	
+		
+	3、问题
+		hibernate的数据初始化怎么实现的，java代码？
+		imsent provider的相关表只有hsqldb的sql文件？
+		cmn_type_t供msgcntr用，gb_指Grade Book吗？
+		角色名改中文，可以吗？
+
+

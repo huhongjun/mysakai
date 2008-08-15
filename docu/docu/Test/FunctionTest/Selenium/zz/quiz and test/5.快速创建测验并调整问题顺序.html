@@ -1,0 +1,264 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>快速创建测验并调整问题顺序</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">快速创建测验并调整问题顺序</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://192.168.0.89:8080/portal/site/87b473b8-8825-4cfc-8062-c952f91aec4b</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : 主页</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[8]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : Tests & Quizzes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>authorIndexForm:assessmentTemplate</td>
+	<td>label=Timed Test</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>authorIndexForm:assessmentTemplate</td>
+	<td>label=Test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>authorIndexForm:title</td>
+	<td>math</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>authorIndexForm:samLiteCreate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Multiple Choice</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>samLiteEntryForm:data</td>
+	<td>1. (10 points)<br />Who was the first president of the United States?<br /><br />*a. Washington<br />b. Jefferson<br />c. Lincoln<br />d. Clinton</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>samLiteEntryForm:description</td>
+	<td>the math test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>samLiteEntryForm:data</td>
+	<td>1. (10 points)<br />Who was the first president of the United States?<br /><br />*a. Washington<br />b. Jefferson<br />c. Lincoln<br />d. bill</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>samLiteEntryForm:_id19</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>samLiteEntryValidation:_id46</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>authorIndexForm:coreAssessments:0:linkSettings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//h4[@onclick="javascript:showHideDiv('assessmentSettingsAction:_id204', '/samigo');"]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>assessmentSettingsAction:feedbackCheckbox4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>assessmentSettingsAction:feedbackCheckbox7</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>assessmentSettingsAction:_id304</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>authorIndexForm:coreAssessments:0:assessmentTitle</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>assesssmentForm:addPart</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>modifyPartForm:title</td>
+	<td>part2</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>modifyPartForm:_id81</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>assesssmentForm:parts:0:parts:0:changeQType</td>
+	<td>label=简短答案/论文</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>itemForm:answerptr</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>itemForm:_id61_textinput</td>
+	<td>who are you?</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>itemForm:_id123_textinput</td>
+	<td>tom</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>itemForm:_id127_textinput</td>
+	<td>any name is ok</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>itemForm:_id135</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>assesssmentForm:parts:0:parts:0:number</td>
+	<td>label=2</td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>assesssmentForm:parts:1:number</td>
+	<td>label=1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>assesssmentForm:parts:1:parts:0:modify</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>itemForm:_id137</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>assesssmentForm:parts:1:parts:1:modify</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>itemForm:_id165_textinput</td>
+	<td>tom</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>itemForm:_id174</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>assesssmentForm:parts:1:parts:0:deleteitem</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>_id1:_id4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=预览测验</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>takeAssessmentForm:_id5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>authorIndexForm:coreAssessments:0:linkRemove</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>removeAssessmentForm:_id4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/ul/li[1]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : 主页</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

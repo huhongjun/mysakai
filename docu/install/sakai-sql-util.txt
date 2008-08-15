@@ -1,0 +1,85 @@
+站点查询SQL
+
+	select site.SITE_ID, site.title as siteTitle, 
+		page.page_id,page.title as pagetitle, 
+		tool.tool_id,tool.TITLE as toolTitle,tool.registration,
+		usermap.eid
+	from SAKAI_SITE site,
+		sakai_site_page page,
+		sakai_site_tool tool, 
+		sakai_user_id_map usermap
+	where site.site_id = page.site_id and page.page_id = tool.page_id
+	and usermap.user_id = site.createdby and usermap.eid = '32657'
+	order by usermap.eid,site.SITE_ID,site.title,page.title,tool.title
+	-------------------------------------------------------------------------------------------------------------------------------------
+	select * from sakai_site_page where sakai_site_page.title='Worksite Setup' and sakai_site_page.site_id in(
+		select site.SITE_ID
+		from SAKAI_SITE site,
+			sakai_site_page page,
+			sakai_site_tool tool, 
+			sakai_user_id_map usermap
+		where site.site_id = page.site_id and page.page_id = tool.page_id
+		and usermap.user_id = site.createdby and usermap.eid = '32657');
+		
+Title更新语句
+	update sakai_site_page 	set title='***'		where PAGE_ID in('***');
+	update sakai_site_tool 	set title='***' 		where TOOL_ID in('***');
+	
+	update sakai_site_page 	set title='课程管理'	where title='站点管理' and site_id in ( select site.site_id from );
+	update sakai_site_tool 	set title='课程管理'	where title='站点管理'  and site_id in ( select site.site_id from );
+	
+	update sakai_site_page set title = '课程管理' where sakai_site_page.title='Worksite Setup' and sakai_site_page.site_id in(
+		select site.SITE_ID
+		from SAKAI_SITE site,
+			sakai_site_page page,
+			sakai_site_tool tool, 
+			sakai_user_id_map usermap
+		where site.site_id = page.site_id and page.page_id = tool.page_id
+		and usermap.user_id = site.createdby and usermap.eid = '32657');	
+		
+	-- 普通用户管理my workspace站点左侧列表
+
+		-- Home
+		update sakai_site_page set title='主页'	where PAGE_ID in('!user-100');
+		-- Profile
+		update sakai_site_page set title='个人信息'	where PAGE_ID in('!user-150');
+		-- Membership
+		update sakai_site_page set title='我的课程'	where PAGE_ID in('!user-200');
+		-- Schedule
+		update sakai_site_page set title='日程管理'	where PAGE_ID in('!user-300');
+		-- Resources
+		update sakai_site_page set title='课程资源'	where PAGE_ID in('!user-400');
+		-- Announcements
+		update sakai_site_page set title='公告浏览'	where PAGE_ID in('!user-450');
+		-- Worksite Setup
+		update sakai_site_page set title='站点管理'	where PAGE_ID in('!user-500');
+		-- Preferences
+		update sakai_site_page set title='个人偏好'	where PAGE_ID in('!user-600');
+		-- Account
+		update sakai_site_page set title='账号管理'	where PAGE_ID in('!user-700');
+				
+	-- 普通用户管理my workspace站点右侧标题
+		-- MOTD
+		update sakai_site_tool set title='今日消息' where TOOL_ID in('!user-110');
+		-- My Workspace Information
+		update sakai_site_tool set title='关于我的空间' where TOOL_ID in('!user-120');
+		-- Calendar
+		update sakai_site_tool set title='日历' where TOOL_ID in('!user-130');
+		-- Recent Announcements
+		update sakai_site_tool set title='最新公告浏览' where TOOL_ID in('!user-140');
+		-- Profile
+		update sakai_site_tool set title='个人信息' where TOOL_ID in('!user-165');
+		-- Membership
+		update sakai_site_tool set title='用户查询' where TOOL_ID in('!user-210');
+		-- Schedule
+		update sakai_site_tool set title='日程管理' where TOOL_ID in('!user-310');
+		-- Resources
+		update sakai_site_tool set title='课程资源' where TOOL_ID in('!user-410');
+		-- Announcements
+		update sakai_site_tool set title='公告浏览' where TOOL_ID in('!user-455');
+		-- Worksite Setup
+		update sakai_site_tool set title='站点管理' where TOOL_ID in('!user-510');
+		-- Preferences
+		update sakai_site_tool set title='个人偏好' where TOOL_ID in('!user-610');
+		-- Account
+		update sakai_site_tool set title='帐号管理' where TOOL_ID in('!user-710');				

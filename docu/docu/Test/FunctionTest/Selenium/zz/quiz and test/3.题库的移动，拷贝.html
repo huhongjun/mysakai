@@ -1,0 +1,264 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>题库的移动，拷贝</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">题库的移动，拷贝</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://192.168.0.89:8080/portal/site/87b473b8-8825-4cfc-8062-c952f91aec4b</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : 主页</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[8]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : Tests & Quizzes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Question Pools</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>questionpool:add</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>questionpool:namefield</td>
+	<td>123</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>questionpool:submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>questionpool:TreeTable:0:move</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>document.forms[0].elements['movePool:TreeTable:1:radiobtn']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>movePool:poolSubmit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>questionpool:TreeTable:0:spacer_for_mozilla</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>questionpool:TreeTable:0:spacer_for_mozilla</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>questionpool:TreeTable:0:spacer_for_mozilla</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>questionpool:TreeTable:1:move</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>document.forms[0].elements['movePool:radiobtn']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>movePool:poolSubmit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>questionpool:TreeTable:0:copy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>document.forms[0].elements['copyPool:TreeTable:1:checkboxes']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>copyPool:copypoolsubmit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>questionpool:TreeTable:1:spacer_for_mozilla</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>document.forms[0].elements['questionpool:TreeTable:2:removeCheckbox']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>questionpool:Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>removePoolForm:Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>questionpool:TreeTable:1:spacer_for_mozilla</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>questionpool:TreeTable:2:move</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>document.forms[0].elements['movePool:TreeTable:0:radiobtn']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>document.forms[0].elements['movePool:radiobtn']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>document.forms[0].elements['movePool:TreeTable:0:radiobtn']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>document.forms[0].elements['movePool:TreeTable:1:radiobtn']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>document.forms[0].elements['movePool:TreeTable:0:radiobtn']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>movePool:poolSubmit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>questionpool:TreeTable:0:spacer_for_mozilla</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>questionpool:TreeTable:2:spacer_for_mozilla</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>questionpool:TreeTable:1:move</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>document.forms[0].elements['movePool:TreeTable:2:radiobtn']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>movePool:poolSubmit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Question Pools</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>document.forms[0].elements['questionpool:TreeTable:0:removeCheckbox']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>questionpool:Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>removePoolForm:Submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/ul/li[1]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : 主页</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

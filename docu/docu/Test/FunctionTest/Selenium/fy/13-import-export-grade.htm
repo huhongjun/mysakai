@@ -1,0 +1,204 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>13-import-export-grade</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">13-import-export-grade</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://192.168.0.89:8080/portal/site/7f4bc9a1-67e8-488c-00fc-fb15bb8beb62</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : fy : Gradebook</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[4]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>gbForm:_idJsp27</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>form:title</td>
+	<td>science</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>form:fileupload</td>
+	<td>\\192.168.0.89\fileshared\fy\score.csv</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>form:saveButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>form:saveButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>gbForm:table1:0:_idJsp41</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>Xpath=id('form:table1')/thead/tr/th[5]/table/tbody/tr/td/label/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>form:importButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>gbForm:points</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@onclick="gbForm_3AdueDateCalendarVar._popUpCalendar(this,document.getElementById('gbForm:dueDate'),'M/d/yy')"]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>gbForm:saveButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>form:_idJsp42</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>gbForm:_idJsp2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Xpath=id('gbForm:assignmentsTable:0:_idJsp38')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>gbForm:gradingTable:_idJsp78</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>gbForm:gradingTable:0:Comment</td>
+	<td>good</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>gbForm:gradingTable:1:Comment</td>
+	<td>just</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>gbForm:gradingTable:2:Comment</td>
+	<td>excellent</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>gbForm:saveButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>gbForm:saveButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>gbForm:_idJsp29</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Xpath=id('gbForm:assignmentsTable:1:_idJsp41')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>gbForm:gradingTable:0:Grade</td>
+	<td>B</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>gbForm:gradingTable:1:Grade</td>
+	<td>B</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>gbForm:gradingTable:2:Grade</td>
+	<td>A</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>gbForm:_idJsp82</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Xpath=id('gbForm:assignmentsTable:0:_idJsp38')</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>gbForm:removeAssignment</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>gbForm:removeConfirmed</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>gbForm:_idJsp32</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[4]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>gbForm:table1:0:_idJsp45</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>gbForm:removeConfirmed</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>gbForm:_idJsp32</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>gbForm:_idJsp2</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

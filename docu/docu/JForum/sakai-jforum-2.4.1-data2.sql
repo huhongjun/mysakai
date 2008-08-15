@@ -1,0 +1,31 @@
+
+insert into jforum_extensions(extension_group_id,extension,allow) values((select extension_group_id from jforum_extension_groups where name='Images'),'bmp',1);
+insert into jforum_extensions(extension_group_id,extension,allow) values((select extension_group_id from jforum_extension_groups where name='Images'),'jpg',1);
+insert into jforum_extensions(extension_group_id,extension,allow) values((select extension_group_id from jforum_extension_groups where name='Images'),'jpeg',1);
+insert into jforum_extensions(extension_group_id,extension,allow) values((select extension_group_id from jforum_extension_groups where name='Images'),'gif',1);
+insert into jforum_extensions(extension_group_id,extension,allow) values((select extension_group_id from jforum_extension_groups where name='Images'),'png',1);
+insert into jforum_extensions(extension_group_id,extension,allow) values((select extension_group_id from jforum_extension_groups where name='Images'),'psd',1);
+insert into jforum_extensions(extension_group_id,extension,allow) values((select extension_group_id from jforum_extension_groups where name='Images'),'tiff',1);
+insert into jforum_extensions(extension_group_id,extension,allow) values((select extension_group_id from jforum_extension_groups where name='Images'),'swf',1);
+insert into jforum_extensions(extension_group_id,extension,allow) values((select extension_group_id from jforum_extension_groups where name='Documents'),'doc',1);
+insert into jforum_extensions(extension_group_id,extension,allow) values((select extension_group_id from jforum_extension_groups where name='Documents'),'pdf',1);
+insert into jforum_extensions(extension_group_id,extension,allow) values((select extension_group_id from jforum_extension_groups where name='Documents'),'xls',1);
+insert into jforum_extensions(extension_group_id,extension,allow) values((select extension_group_id from jforum_extension_groups where name='Documents'),'ppt',1);
+insert into jforum_extensions(extension_group_id,extension,allow) values((select extension_group_id from jforum_extension_groups where name='Documents'),'pps',1);
+insert into jforum_extensions(extension_group_id,extension,allow) values((select extension_group_id from jforum_extension_groups where name='Documents'),'html',1);
+insert into jforum_extensions(extension_group_id,extension,allow) values((select extension_group_id from jforum_extension_groups where name='Documents'),'htm',1);
+insert into jforum_extensions(extension_group_id,extension,allow) values((select extension_group_id from jforum_extension_groups where name='Media'),'midi',1);
+insert into jforum_extensions(extension_group_id,extension,allow) values((select extension_group_id from jforum_extension_groups where name='Media'),'mov',1);
+insert into jforum_extensions(extension_group_id,extension,allow) values((select extension_group_id from jforum_extension_groups where name='Media'),'wav',1);
+insert into jforum_extensions(extension_group_id,extension,allow) values((select extension_group_id from jforum_extension_groups where name='Media'),'mp3',1);
+insert into jforum_extensions(extension_group_id,extension,allow) values((select extension_group_id from jforum_extension_groups where name='Media'),'acc',1);
+insert into jforum_extensions(extension_group_id,extension,allow) values((select extension_group_id from jforum_extension_groups where name='Utility'),'gz',1);
+insert into jforum_extensions(extension_group_id,extension,allow) values((select extension_group_id from jforum_extension_groups where name='Utility'),'tar',1);
+insert into jforum_extensions(extension_group_id,extension,allow) values((select extension_group_id from jforum_extension_groups where name='Utility'),'zip',1);
+insert into jforum_extensions(extension_group_id,extension,allow) values((select extension_group_id from jforum_extension_groups where name='Utility'),'sit',1);
+insert into jforum_extensions(extension_group_id,extension,allow) values((select extension_group_id from jforum_extension_groups where name='Utility'),'sitx',1);
+insert into jforum_extensions(extension_group_id,extension,allow) values((select extension_group_id from jforum_extension_groups where name='Banned'),'exe',0);
+insert into jforum_extensions(extension_group_id,extension,allow) values((select extension_group_id from jforum_extension_groups where name='Banned'),'bat',0);
+insert into jforum_extensions(extension_group_id,extension,allow) values((select extension_group_id from jforum_extension_groups where name='Banned'),'pif',0);
+insert into jforum_extensions(extension_group_id,extension,allow) values((select extension_group_id from jforum_extension_groups where name='Banned'),'bin',0);
+

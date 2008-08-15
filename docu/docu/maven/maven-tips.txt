@@ -1,0 +1,21 @@
+﻿
+1、build时忽略JUnit测试
+	maven -Dmaven.test.skip=true
+
+2、maven内存参数-堆栈设置，避免OutofMemory错误
+	MAVEN_OPTS="-Xmx384m -XX:PermSize=48m"
+
+4、maven 文件说明
+	maven.xml 用于定义maven的goal，如：load-data
+	project.xml 用于定义项目
+	project.xml文件中的{}引用的是project.properties中的定义
+
+5、修改properties文件后执行maven load-data前记得先bld，因为用的是target下面的文件
+
+6、集成测试：maven -Dmaven.test.skip=false itest
+
+7、安装maven的sakai插件
+	maven plugin:download -DartifactId=sakai -DgroupId=sakaiproject -Dversion=2.2 -Dmaven.repo.remote=http://source.sakaiproject.org/maven/
+	
+更新eclipse workspace的环境变量M2_REPO
+mvn -Declipse.workspace=<path-to-ws> eclipse:configuration-workspace

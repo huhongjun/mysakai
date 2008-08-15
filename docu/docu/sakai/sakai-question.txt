@@ -1,0 +1,30 @@
+﻿1、jdbc:hsqldb:mem:sakai-help
+	是否表示help工具总是用hsqldb
+
+2、
+	system.repository.host=http://localhost:8090
+	system.baseUrl=http://localhost:8090/sakai2-repository/
+	system.repository.rootPath=repository-files
+	repository.path=/usr/local/sakai/repository
+
+3、小景开发代码的问题：
+	读属性文件应该用ServerConfigService或者在component.xml中用{}或 sakai.properties中的@定义
+	直接使用BasicSqlService中的可传入connection的函数(可能需要另写方法)
+
+7、bugs
+	页面定制中改为中文时乱码
+	编辑HTML页面乱码
+
+8/ Demo  安装特别注意事项：
+
+数据存储
+	
+
+Demo 安装版的数据保存在 HypersonicSQL database (HSQLDB) 中，运行时，数据存放在内存中， tomcat 停止时写回文件，文件位于： sakai-demo/sakai/db/sakai.db.* .
+
+没有 email 配置
+	
+
+Sakai 的 demo 版没有配置 email
+
+9/ jdiff 如何使用

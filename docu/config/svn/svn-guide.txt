@@ -1,0 +1,12 @@
+注：删除shanre目录下的中文语言包，否则乱码。
+
+svnadmin create d:\svn_repo
+
+svn mkdir svn://192.168.2.168/proj1
+svn mkdir file:///d:/svn_repo/vcle-osmatrix
+
+svn import . file:///d:/svn_repo/vcle-osmatrix
+svn checkout file:///d:/svn_repo/vcle-osmatrix testdir
+
+
+实际用的时候，可以用SVNService把SVN注册为服务，COPY到Subversion\bin下注册比较方便。也可以用SC注册，但SC需要装WINDOWS TOOLKIT才可以用。我用SVNService注册服务的时候碰到问题，没有注册成功，RP问题吧，网上好象都注册成功了。还没解决，我先把启动命令写了BAT批处理，手动运行服务了。

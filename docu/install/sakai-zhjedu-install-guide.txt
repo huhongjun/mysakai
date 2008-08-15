@@ -1,0 +1,126 @@
+一、安装
+	# 安装JDK1.5；
+	# 安装Tomcat；
+		配置：URIEncoding、9080、tomcat/manager
+		启动脚本
+		关闭脚本
+	# 安装Oracle
+			新建SID、用户、授权(edlt/edlt)
+	编译
+		修改build.properties指向D:\ASakai-zhjedu
+		编译Sakai标准应用+JForum+Melete+Sitestats
+				
+		编译Sakai扩展-edlt
+			BIRTViewer
+				数据库配置
+				oracle jar包部署
+				http://localhost:9080/birtviewer/run?__report=report/JforumTopics.rptdesign
+				http://localhost:9080/birtviewer/run?__report=report/JforumTopicsLH.rptdesign
+			zhjedu-providers（数据库配置）
+			zhjedu-synchronizer（数据库配置）
+	安装全部应用（BeyondCompare远程FTP服务器配置）
+	
+	初始化运行
+		sakai.properties+locall.properties
+			server: id/url/name
+			database: user/pwd、sid
+			logoutURL
+	
+	sakai初始化（Eclipse+SQLExplorer： 从scite-utf8拷贝到sql editor）
+		1、db-i10n.sql（修改角色描述为教师、助教和学生）
+		2、init-academic.sql（初始化学期，使可以新增课程）
+		3、安装library/skin/default（知金skin）
+	
+	补充安装
+		melete
+			var目录
+			迁移相关
+				Melete for mysql: CREATE TABLE melete_migrate_status (START_FLAG tinyint(1),COMPLETE_FLAG tinyint(1));
+				Melete for oracle: CREATE TABLE melete_migrate_status (START_FLAG number(1),COMPLETE_FLAG number(1));
+				insert into melete_migrate_status(START_FLAG,COMPLETE_FLAG) values(1,1);	//使系统认为已经迁移成功
+			用户信息字段： modified_by_fname/modified_by_lname【好像没问题了】
+				方法一 补全用户这两个字段的信息
+				方法二 修改Oracle数据库定义使可为空(plsqldeveloper或sql 脚本？)
+		JForum
+			jforum_topic表增加topic_views字段，number(10), nullable, default 1
+二、配置
+	权限配置：
+		用户类型权限
+			教师权限
+				不能新建、删除站点
+				不能添加工具和页面
+			学生权限
+				不能新建修改站点，除了自己的
+			助教权限
+				不能新建修改站点，除了自己的
+		课程站点权限
+			教师
+			助教
+			学生
+			
+		JForum、Melete一般权限配置（!site.template.course）
+			教师：JForum.manage
+			助教：manage
+			学生：member
+		教师复制课程、导入课程去掉【程序修改方式实现】
+			已实现
+	站点设计：
+		我的空间[!user站点是所有用户我的空间的模板]
+			！user去掉[我的课程]页面
+			！user[站点管理]改成[课程管理]
+			！user添加【帮助中心】页面
+		课程模板
+			添加【查询统计】页面
+		
+	工具设置或初始化操作：
+		同步课程数据
+			admin=》站点设计=》～admine增加页面=》增加知金同步工具，点击【数据同步】按钮。	
+		JForum测试
+			admin=》添加JForum=》管理员设置
+				url、发件人邮箱、SMTP服务器
+			教师或助教=》初始化论坛、主题设置
+				SQL脚本
+		mailtool设置
+			用户邮箱设置
+
+三、测试
+
+	一般测试：
+		教师端
+			课程大纲
+			日程管理
+			课程公告
+			课程资源
+			课程章节
+			课程论坛
+			邮件工具
+		学生端
+			
+	特别测试：
+		单点登录(教师还是Sakai登录，学生从知金平台过来仿单点登录)
+			http://192.168.0.80:9080/sakai-login-tool/login.jsp?logintype=zhj&eid=32656
+		接口测试
+			中间库用户登录（统一密码sakai）
+			中间库
+				教师登录
+				助教登录
+				学生登录
+		Melete测试(是否可用)
+			新建章、节
+		JForum测试(是否可用)
+			发帖、回帖
+			查看报表
+		Mailtool
+			发邮件给同一站点的成员
+			发邮件到外部（是否乱码）
+	参考sakai-test-list.txt做测试
+----------------------------------------------------------------------------------------------------------------------------------------------		
+站点创建：		dGVzdHNha2Fp
+	其它工具
+	查询统计页面
+	如果所有我的空间总是英文，得程序控制中文【ok】
+	删除链接：复制课程、导入课程
+	
+	左边栏乱码问题
+	
+	Internet: 123.127.20.98:9080/portal

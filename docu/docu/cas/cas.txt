@@ -1,0 +1,25 @@
+注：安装了tnative 会有影响
+
+CAS Server: 3.0.4 或 3.1.1
+CAS Client: 2.1.1
+
+keytool -genkey -alias sakai -keyalg RSA -keystore sakai.keystore
+	password: hhj123
+	CN:huhj
+	主密码：相同
+
+keytool -export -file sakai-cas-server.crt -alias sakai -keystore sakai.keystore
+	输入密码：hhj123
+	[服务端、客户端JVM均须执行]
+	
+keytool -import -keystore D:/adeveloper/java/jdk1.5.0/jre/lib/security/cacerts -file sakai-cas-server.crt -alias sakai
+	输入密码：changeit
+	
+server.xml
+	keystorePass="hhj123" keystoreFile="conf/sakai.keystore"
+
+https://pastoral:8443
+
+现在存在的问题：
+	mvn 编译不成功
+	密码md5功能没有（修改继承的基类使之初始化有md5功能的密码编码类）

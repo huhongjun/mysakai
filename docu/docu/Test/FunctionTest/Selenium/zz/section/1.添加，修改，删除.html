@@ -1,0 +1,519 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>添加，修改，删除</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">添加，修改，删除</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://192.168.0.89:8080/portal/site/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : My Workspace : Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//li[2]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : 主页</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[17]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : Section Info</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>overviewForm:_idJsp17</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>document.optionsForm.elements['optionsForm:externallyManaged'][1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>optionsForm:selfRegister</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>optionsForm:_idJsp40</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>overviewForm:_idJsp8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectAndWait</td>
+	<td>addSectionsForm:category</td>
+	<td>label=Lecture</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>document.addSectionsForm.elements['addSectionsForm:sectionTable:0:limit'][1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>addSectionsForm:sectionTable:0:maxEnrollmentInput</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>addSectionsForm:sectionTable:0:meetingsTable:0:monday</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>addSectionsForm:sectionTable:0:meetingsTable:0:tuesday</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>addSectionsForm:sectionTable:0:meetingsTable:0:location</td>
+	<td>edlt</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>addSectionsForm:_idJsp79</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>overviewForm:sectionsTable:0:_idJsp53</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>memberForm:_idJsp49</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>overviewForm:sectionsTable:0:_idJsp57</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>memberForm:_idJsp45</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>overviewForm:_idJsp12</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>rosterForm:_idJsp31</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[19]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : Site Info</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=添加参与者</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>noEmailInIdAccount</td>
+	<td>bupt<br />bupt3<br />zhangzhi<br />wiki</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>same_role_false</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doContinue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>noEmailInIdAccount</td>
+	<td>bupt<br />bupt3<br />zhangzhi</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doContinue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>role1</td>
+	<td>label=Instructor</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>role2</td>
+	<td>label=Student</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>role3</td>
+	<td>label=Teaching Assistant</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doContinue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doContinue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doAdd_participant</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/ul/li[1]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : 主页</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[17]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : Section Info</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>overviewForm:sectionsTable:0:_idJsp53</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>memberForm:availableUsers</td>
+	<td>label=zhangzhi</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@value='&gt;']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>memberForm:_idJsp48</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>overviewForm:sectionsTable:0:_idJsp57</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>memberForm:availableUsers</td>
+	<td>label=bupt3</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//input[@value='&gt;']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>memberForm:_idJsp44</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>overviewForm:_idJsp12</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>rosterForm:sectionsTable:0:_idJsp36</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>editSectionForm:editStudentSectionsTable:0:unjoin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>overviewForm:sectionsTable:0:_idJsp50</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>editSectionForm:sectionTable:0:limit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>editSectionForm:sectionTable:0:titleInput</td>
+	<td>edit</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>editSectionForm:_idJsp71</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>overviewForm:sectionsTable:0:remove</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>overviewForm:_idJsp94</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>editSectionForm:_idJsp28</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>overviewForm:_idJsp17</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>optionsForm:externallyManaged</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>optionsForm:_idJsp40</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>optionsForm:_idJsp27</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>overviewForm:_idJsp12</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[19]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : Site Info</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>remove_a29c87b8-7518-48fa-0056-c69330891ec5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>remove_39795a4d-7877-40b6-80a9-a848b7b09180</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>remove_7dc6a2ab-755c-4826-0083-9a8120223b16</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>remove_39795a4d-7877-40b6-80a9-a848b7b09180</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>remove_7d33f6f5-baa6-4699-0006-e229d93e9975</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doUpdate_participant</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[17]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : Section Info</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>overviewForm:_idJsp12</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Reset']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/ul/li[1]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Sakai Based Service : Discussion 1 SMPL202 Summer 2007 : 主页</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

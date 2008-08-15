@@ -1,0 +1,12 @@
+https://source.sakaiproject.org/contrib/foothill/sakai-jforum/tags/jforum_2-4-1
+https://source.sakaiproject.org/contrib/foothill/melete/tags/melete_2-4-5
+https://source.sakaiproject.org/contrib/ufp/sitestats/tags/sitestats_1-0
+https://source.sakaiproject.org/contrib/tasklist/trunk
+
+https://source.sakaiproject.org/contrib/muse/mneme/tags/1.0.6
+
+sakai 2.5
+
+https://source.sakaiproject.org/contrib/agora/trunk
+https://source.sakaiproject.org/contrib/scorm/SCORM.2004.3ED.RTE/trunk
+https://source.sakaiproject.org/contrib/wicket/sakai-wicket/trunk

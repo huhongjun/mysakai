@@ -1,0 +1,6 @@
+8080¶Ë¿Ú£º
+call dbms_xdb.cfg_update(updateXML(dbms_xdb.cfg_get(),'/xdbconfig/sysconfig/protocolconfig/httpconfig/http-port/text()',8081)); 
+
+Æô¶¯sqlplus
+
+10g express editiong Ä¬ÈÏALU32UTF8

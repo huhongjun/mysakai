@@ -1,0 +1,454 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>7-add-edit-delete-projectsite</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">7-add-edit-delete-projectsite</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://192.168.0.89:8080/portal/site/%7Efy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>5000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=新的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>project</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doSite_type</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>title</td>
+	<td>123</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>continueButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>sakai.announcements</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>sakai.assignment.grades</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>blogger</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>sakai.chat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>sakai.discussion</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>sakai.dropbox</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Continue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>joinerRole</td>
+	<td>label=access</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>joinable</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doUpdate_site_access</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>addSite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>site2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=修改</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=编辑站点信息</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>description</td>
+	<td>123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>short_description</td>
+	<td>123</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doContinue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doSave_siteInfo</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=编辑工具</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Continue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doSave_revised_features</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Manage Groups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>2000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=新的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>Title</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>Title</td>
+	<td>123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>Description</td>
+	<td>123</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>generallist</td>
+	<td>label=fu, yu (fy)</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>1000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Xpath=id('groupForm')/table/tbody/tr[1]/th[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>grouplist</td>
+	<td>label=fu, yu (fy)</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Xpath=id('groupForm')/table/tbody/tr[1]/th[4]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doBack</td>
+	<td>Cancel</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>site2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=修改</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=进入站点</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doUpdate_site_access</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=添加参与者</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>noEmailInIdAccount</td>
+	<td>a<br />b<br />c</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doContinue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>selectRole_access</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doContinue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doContinue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doAdd_participant</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=复制站点</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>title</td>
+	<td>234</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>duplicateSite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>Maindcf056e3x057ex4a10x007bx821f759a380f</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>remove_3ed7e79b-167b-4af0-80d9-49b310e12513</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>remove_123eb32d-86fd-4951-0066-7334509c768c</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>remove_998c37b3-eaa7-4514-809f-58bff95fdf87</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doUpdate_participant</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doUpdate_participant</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=导入的源站点</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>site_3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doContinue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>toolSite21</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>toolSite31</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>toolSite51</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doContinue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Page Order</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//img[contains(@src,'http://192.168.0.89:8080/sakai-site-pageorder-helper/content/images/cross.gif')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[contains(@src,'http://192.168.0.89:8080/sakai-site-pageorder-helper/content/images/cross.gif')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure you want to remove page:&nbsp;&nbsp;Announcements?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>content:::save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td></td>
+	<td>5000</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>Maindcf056e3x057ex4a10x007bx821f759a380f</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Page Order</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>Add page(s) to your site</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//img[contains(@src,'http://192.168.0.89:8080/sakai-site-pageorder-helper/content/images/add.gif')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[contains(@src,'http://192.168.0.89:8080/sakai-site-pageorder-helper/content/images/add.gif')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//img[contains(@src,'http://192.168.0.89:8080/sakai-site-pageorder-helper/content/images/add.gif')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[contains(@src,'http://192.168.0.89:8080/sakai-site-pageorder-helper/content/images/add.gif')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>content:::reset</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure you want to reset your page ordering to the default order? There is no undo.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>content:::save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>back</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>site2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>site3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=删除</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doSite_delete_confirmed</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

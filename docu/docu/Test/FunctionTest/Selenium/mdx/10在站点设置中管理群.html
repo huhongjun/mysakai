@@ -1,0 +1,189 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>在站点设置中管理群</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">在站点设置中管理群</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>http://192.168.0.89:8080/portal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Gateway : Welcome</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>eid</td>
+	<td>mdx</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>pw</td>
+	<td>86125386</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : My Workspace : Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[7]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : My Workspace : Worksite Setup</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>Main46c91a45x60b1x40dbx80efxba093b164ca9</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>site5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=修改</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Manage Groups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=新的</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>Title</td>
+	<td>x工作组</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>Description</td>
+	<td>功能测试</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>generallist</td>
+	<td>label=Administrator, Sakai (admin)</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>generallist</td>
+	<td>label=mdx (mdx)</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>document.groupForm.elements['Add to group &gt;']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Update</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Revise</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>Title</td>
+	<td>x工作组X</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>Description</td>
+	<td>功能测试qqq</td>
+</tr>
+<tr>
+	<td>addSelection</td>
+	<td>grouplist</td>
+	<td>label=Administrator, Sakai (admin)</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>document.groupForm.elements['&lt; Remove']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Update</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>removeGroups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>Main46c91a45x60b1x40dbx80efxba093b164ca9</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>removeButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doGroup_remove_confirmed</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>eventSubmit_doBack</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectFrame</td>
+	<td>relative=up</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[2]/ul/li[1]/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : My Workspace : Home</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=退出系统</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Sakai Based Service : Gateway : Welcome</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
