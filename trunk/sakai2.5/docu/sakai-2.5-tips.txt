@@ -1,0 +1,74 @@
+export MAVEN_OPTS="-Xmx384m -XX:PermSize=48m"
+
+mvn clean install sakai:deploy -Dmaven.tomcat.home=/pathto/tomcathome
+
+mvn -o clean install sakai:deploy
+
+mvn -Pframework clean install sakai:deploy
+
+mvn -Dmaven.test.skip=true clean install sakai:deploy
+
+mvn -Dmaven.test.skip=true sakai:deploy
+
+mvn -x
+
+log.config.count=3
+log.config.1 = ALL.org.sakaiproject.log.impl
+log.config.2 = OFF.org.sakaiproject
+log.config.3 = DEBUG.org.sakaiproject.db.impl
+
+OFF TRACE DEBUG INFO WARN ERROR FATAL ALL
+
+Java 			1.5
+Tomcat		5.5.23
+	windows下路径无空格
+	URIEncoding UTF-8
+Maven 2.0.8
+	$Home/.m2/setting.xml
+	
+RDBMS
+	MySQL 5.0.x 	Oracle 10g
+	MySQL 4.1.12+ 	Oracle 9i
+
+Mysql	
+	mysql> create database sakai default character set utf8;
+	mysql> grant all on sakai.* to sakaiuser@'localhost' identified by 'sakaipassword';
+	mysql> grant all on sakai.* to sakaiuser@'127.0.0.1' identified by 'sakaipassword';
+
+	MySQL 5.0.x 	MySQL Connector/J 5.0.4+ http://dev.mysql.com/downloads/connector/j/5.0.html
+	MySQL 4.1.12+ 	MySQL Connector/J 3.1.12+ http://dev.mysql.com/downloads/connector/j/3.1.html
+
+Oracle
+	select value from nls_database_parameters where parameter = 'NLS_CHARACTERSET';
+	ojdbc14.jar
+	
+工具：
+	OSP 					provisional=>core
+	Samigo				provisional=>core
+	Reset Password	contrib=>core	
+	Discussion 	 		Retired from release to Contrib
+	
+工具增强
+	account				Option to sync user data between Account and Profile tools
+	Assignments		
+	Attachment Widget
+	Chat Room
+	Citations Helper
+	Forums
+	Help
+	Gradebook
+	Messages
+	Portfolio (OSP)
+	Profile
+	Resources
+	Roster
+	Schedule
+	Section Info
+	Tests & Quizzes, a.k.a. Samigo
+Portal
+
+    * Addition of site categorization.
+    * Addition of tool categorization.
+    * Improved experimental iFrame-less tool presentation (a.k.a. PDA portal).
+	
+	
